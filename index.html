@@ -239,6 +239,18 @@
     </footer>
   </div>
 
+  <script>
+    if (/Mobi|Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent)) {
+      document.body.innerHTML = `
+        <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;background:var(--bg);">
+          <div style="background:var(--surface);padding:2.5rem 2rem 2rem 2rem;border-radius:18px;box-shadow:0 4px 32px rgba(0,0,0,.13);max-width:95vw;width:420px;text-align:center;">
+            <div style="font-size:2.2rem;line-height:1.2;margin-bottom:1.2rem;">⚠️</div>
+            <div style="font-size:1.25rem;font-weight:700;color:var(--accent-500);margin-bottom:1.1rem;">Please use a computer to view this page</div>
+            <div style="font-size:1rem;color:var(--muted);line-height:1.7;">This tool is only compatible with desktop browsers and may not display properly on mobile devices.</div>
+          </div>
+        </div>`;
+    }
+  </script>
   <script src="script.js"></script>
 </body>
 </html> 

@@ -71,7 +71,7 @@ a{ color:inherit }
 @media (max-width: 720px){ .col-6{ grid-column: span 12 } }
 
 label{ font-size:.875rem; color:var(--muted); margin-bottom:.5rem; display:flex; align-items:center; gap:.35rem }
-.req{ color: color-mix(in oklab, var(--accent-500) 80%, #ff4d4f); font-weight:700 }
+.req{ color: var(--accent-500); font-weight: 700; }
 
 input[type="text"], input[type="password"], input[type="url"], input[type="number"], textarea{
   width:100%; border:1px solid var(--line); background: color-mix(in oklab, var(--surface) 92%, transparent); color:var(--text);

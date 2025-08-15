@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "BallsDex 設定檔產生器",
+    "subtitle": "純前端頁面．Ray Hsueh出品",
+    "privacy": "保護您的隱私隱私：僅儲存在本機瀏覽器",
+    "use_desktop_title": "請使用電腦瀏覽本頁面",
+    "use_desktop_desc": "此工具僅支援桌面版瀏覽器，行動裝置可能顯示不正常。",
+    "tip_download": "小提示：按下 Ctrl + S 可下載。",
+    "live_preview": "即時預覽"
+  },
+  "aria": {
+    "toggle_theme": "切換主題",
+    "open_github": "開啟 GitHub"
+  },
+  "common": {
+    "how": "如何取得"
+  },
+  "hero": {
+    "eyebrow": "不用手動編輯 config.yml",
+    "title": "為你的 Ballsdex 機器人產生完美設定",
+    "subtitle_html": "匯出你的 <span class=\"kbd\">config.yml</span>。有問題可至 <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">開發伺服器</a> 詢問。"
+  },
+  "form": {
+    "reset": "重設",
+    "autosave": "自動儲存 • 開啟",
+    "sections": {
+      "basic": "基本",
+      "about": "關於",
+      "game": "遊戲",
+      "admin": "管理",
+      "admin_panel": "管理面板",
+      "game_messages": "遊戲訊息"
+    },
+    "fields": {
+      "discord_token": "Discord 機器人 Token",
+      "discord_token_placeholder": "貼上你的 token",
+      "discord_token_help_html": "從 Discord 開發者後台（<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">如何取得</a>）<br>若你想直接在檔案內貼上 token，可以將此欄留空。",
+      "text_prefix": "文字指令前綴",
+      "text_prefix_help": "舊式文字指令的前綴",
+      "description": "描述",
+      "github_link": "GitHub 連結",
+      "discord_invite": "Discord 邀請連結",
+      "terms": "服務條款",
+      "privacy": "隱私權政策",
+      "collectible_name": "收集物名稱",
+      "plural_collectible_name": "收集物（複數）名稱",
+      "bot_name": "機器人名稱",
+      "players_group": "玩家群組指令名稱",
+      "fav_emoji": "最愛收集物表情符號",
+      "max_favorites": "最愛上限",
+      "max_attack_bonus": "攻擊加成上限",
+      "max_health_bonus": "生命加成上限",
+      "guild_ids": "伺服器ID",
+      "guild_ids_placeholder": "每行一個 ID",
+      "root_roles": "高級管理員身分組 ID",
+      "admin_roles": "管理員身分組 ID",
+      "roles_placeholder": "每行一個身分組 ID",
+      "log_channel": "log 頻道 ID",
+      "log_channel_placeholder": "log 頻道 ID",
+      "log_channel_help": "請輸入用於 log 的 Discord 頻道 ID",
+      "client_id": "Discord 應用程式 Client ID",
+      "client_secret": "Discord 應用程式 Client Secret",
+      "webhook_url": "Webhook 網址",
+      "admin_panel_url": "管理面板網址",
+      "available_vars": "可用變數：",
+      "spawn_min": "最小出現機率（分鐘）",
+      "spawn_max": "最大出現機率（分鐘）",
+      "catch_btn_label": "捕捉按鈕文字",
+      "caught_success": "捕捉成功訊息",
+      "wrong_msg": "答錯名稱訊息",
+      "spawn_msg": "出現訊息",
+      "slow_msg": "太慢了訊息",
+      "multi_line_help": "可輸入多行訊息，每行一則。",
+      "download_config": "下載 config.yml",
+      "optional": "可不填",
+      "lines_to_items": "每行會自動轉成一個項目"
+    },
+    "errors": {
+      "only_lower_num_underscore": "僅能使用小寫字母、數字與底線。",
+      "no_caps": "不可使用大寫字母。",
+      "no_spaces": "不可包含空白。",
+      "confirm_clear": "確定要清除所有欄位嗎？"
+    }
+  },
+  "preview": {
+    "file": "config.yml"
+  },
+  "footer": {
+    "notice": "此產生的",
+    "notice_tail": "可能不是最新。請與程式輸出的檔案交叉比對以確保正確性。"
+  }
+} 

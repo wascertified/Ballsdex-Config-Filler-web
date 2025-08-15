@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "BallsDex Config Filler",
+    "subtitle": "Purely static. By Ray Hsueh.",
+    "privacy": "Privacy: local-only",
+    "use_desktop_title": "Please use a computer to view this page",
+    "use_desktop_desc": "This tool is only compatible with desktop browsers and may not display properly on mobile devices.",
+    "tip_download": "Tip: Press Ctrl + S to download.",
+    "live_preview": "Live Preview"
+  },
+  "aria": {
+    "toggle_theme": "Toggle theme",
+    "open_github": "Open GitHub"
+  },
+  "common": {
+    "how": "How"
+  },
+  "hero": {
+    "eyebrow": "No config.yml hand‑editing",
+    "title": "Generate a perfect config for your Ballsdex bot",
+    "subtitle_html": "Export your <span class=\"kbd\">config.yml</span>. If you have any questions, ask in <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">dev server</a>."
+  },
+  "form": {
+    "reset": "Reset",
+    "autosave": "Autosave • On",
+    "sections": {
+      "basic": "Basic",
+      "about": "About",
+      "game": "Game",
+      "admin": "Admin",
+      "admin_panel": "Admin Panel",
+      "game_messages": "Game Messages"
+    },
+    "fields": {
+      "discord_token": "Discord Bot Token",
+      "discord_token_placeholder": "Paste your token",
+      "discord_token_help_html": "From Discord Developer Portal (<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">How</a>)<br>If you prefer to paste the token directly into the file, you may leave this blank.",
+      "text_prefix": "Text Command Prefix",
+      "text_prefix_help": "Prefix for legacy text commands",
+      "description": "Description",
+      "github_link": "GitHub Link",
+      "discord_invite": "Discord Invite Link",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "collectible_name": "Collectible Name",
+      "plural_collectible_name": "Plural Collectible Name",
+      "bot_name": "Bot Name",
+      "players_group": "Players Group Command Name",
+      "fav_emoji": "Favorited Collectible Emoji",
+      "max_favorites": "Max Favorites",
+      "max_attack_bonus": "Max Attack Bonus",
+      "max_health_bonus": "Max Health Bonus",
+      "guild_ids": "Guild IDs",
+      "guild_ids_placeholder": "One ID per line",
+      "root_roles": "Root Admin Role IDs",
+      "admin_roles": "Admin Role IDs",
+      "roles_placeholder": "One role ID per line",
+      "log_channel": "Log Channel ID",
+      "log_channel_placeholder": "Log channel ID",
+      "log_channel_help": "Enter the Discord channel ID for moderation logs",
+      "client_id": "Discord Application Client ID",
+      "client_secret": "Discord Application Client Secret",
+      "webhook_url": "Webhook URL",
+      "admin_panel_url": "Admin Panel URL",
+      "available_vars": "Available variables:",
+      "spawn_min": "Spawn Chance Min (minutes)",
+      "spawn_max": "Spawn Chance Max (minutes)",
+      "catch_btn_label": "Catch Button Label",
+      "caught_success": "Caught Success Message",
+      "wrong_msg": "Wrong Name Message",
+      "spawn_msg": "Spawn Message",
+      "slow_msg": "Too Slow Message",
+      "multi_line_help": "You can enter multiple messages, one per line.",
+      "download_config": "Download config.yml",
+      "optional": "optional",
+      "lines_to_items": "Each line becomes one item"
+    },
+    "errors": {
+      "only_lower_num_underscore": "Only lowercase letters, numbers, and underscores are allowed.",
+      "no_caps": "No capital letters allowed.",
+      "no_spaces": "No spaces allowed.",
+      "confirm_clear": "Clear all fields?"
+    }
+  },
+  "preview": {
+    "file": "config.yml"
+  },
+  "footer": {
+    "notice": "The generated",
+    "notice_tail": "may be outdated. Please manually cross-check it with the program-generated file to ensure accuracy."
+  }
+} 

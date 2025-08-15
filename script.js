@@ -341,7 +341,6 @@ function clearYamlHighlight() {
 function render(){
   const data = collect();
   const yaml = generateFullYAML(data);
-  // 將每行包成 span，方便高亮
   out.innerHTML = yaml.split('\n').map((line,i)=>`<span data-line='${i+1}'>${line.replace(/ /g,'&nbsp;')}</span>`).join('\n');
   localStorage.setItem(STORE_KEY, JSON.stringify(data));
   const gh = (data.githubLink||'').trim();
@@ -370,9 +369,9 @@ function render(){
     if (el) {
       const val = el.value;
       let msg = '';
-      if (/[^a-z0-9_]/.test(val)) msg = 'Only lowercase letters, numbers, and underscores are allowed.';
-      if (/[A-Z]/.test(val)) msg = 'No capital letters allowed.';
-      if (/\s/.test(val)) msg = 'No spaces allowed.';
+      if (/[^a-z0-9_]/.test(val)) msg = (window.i18n?.t('form.errors.only_lower_num_underscore') || 'Only lowercase letters, numbers, and underscores are allowed.');
+      if (/[A-Z]/.test(val)) msg = (window.i18n?.t('form.errors.no_caps') || 'No capital letters allowed.');
+      if (/\s/.test(val)) msg = (window.i18n?.t('form.errors.no_spaces') || 'No spaces allowed.');
       if (msg) {
         el.classList.add('input-error');
         const div = document.createElement('div');
@@ -412,7 +411,7 @@ dlBtn.addEventListener('click', download);
 document.addEventListener('keydown', (e)=>{ if((e.ctrlKey||e.metaKey) && e.key.toLowerCase()==='s'){ e.preventDefault(); download(); }});
 
 resetBtn.addEventListener('click', ()=>{
-  if(!confirm('Clear all fields?')) return;
+  if(!confirm(window.i18n?.t('form.errors.confirm_clear') || 'Clear all fields?')) return;
   form.reset(); localStorage.removeItem(STORE_KEY); render();
 });
 
@@ -439,7 +438,6 @@ button:disabled { opacity:0.5; cursor:not-allowed; }
   document.head.appendChild(style);
 } 
 
-// 為所有表單欄位加上 focus/blur 事件
 window.addEventListener('DOMContentLoaded',()=>{
   Object.keys(fieldToYamlLine).forEach(field=>{
     const el = document.getElementsByName(field)[0];
@@ -448,4 +446,40 @@ window.addEventListener('DOMContentLoaded',()=>{
       el.addEventListener('blur',clearYamlHighlight);
     }
   });
+
+  const langCtl = document.getElementById('langCtl');
+  const langBtn = document.getElementById('langBtn');
+  const langList = document.getElementById('langList');
+  const langLabel = document.getElementById('langLabel');
+
+  function updateLabel(code){
+    langLabel.textContent = code === 'zh-TW' ? '繁體中文' : (code === 'es' ? 'Español' : 'English');
+    Array.from(langList.children).forEach(li=>{
+      li.setAttribute('aria-selected', li.dataset.value === code ? 'true' : 'false');
+    });
+  }
+
+  function openMenu(){ langCtl.classList.add('open'); langBtn.setAttribute('aria-expanded','true'); langList.focus(); }
+  function closeMenu(){ langCtl.classList.remove('open'); langBtn.setAttribute('aria-expanded','false'); }
+
+  langBtn.addEventListener('click', (e)=>{ e.stopPropagation(); if(langCtl.classList.contains('open')) closeMenu(); else openMenu(); });
+  document.addEventListener('click', (e)=>{ if(!langCtl.contains(e.target)) closeMenu(); });
+  langList.addEventListener('click', (e)=>{
+    const li = e.target.closest('li[role="option"]');
+    if(!li) return;
+    const code = li.dataset.value;
+    window.i18n?.setLang(code);
+    closeMenu();
+  });
+
+  window.addEventListener('i18n:ready', (ev)=>{ updateLabel(ev.detail.lang); });
+  window.addEventListener('i18n:changed', (ev)=>{ updateLabel(ev.detail.lang); });
+
+  const nav = (navigator.language||'en').toLowerCase();
+  const initial = nav.startsWith('zh') ? 'zh-TW' : (nav.startsWith('es') ? 'es' : 'en');
+  if(window.i18n){
+    updateLabel(window.i18n.lang);
+  } else {
+    updateLabel(initial);
+  }
 }); 

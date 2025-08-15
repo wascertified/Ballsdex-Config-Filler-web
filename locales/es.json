@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "Generador de config de BallsDex",
+    "subtitle": "Sitio estático puro. Por Ray Hsueh.",
+    "privacy": "Privacidad: solo local",
+    "use_desktop_title": "Usa una computadora para ver esta página",
+    "use_desktop_desc": "Esta herramienta solo es compatible con navegadores de escritorio y puede no mostrarse correctamente en dispositivos móviles.",
+    "tip_download": "Consejo: Presiona Ctrl + S para descargar.",
+    "live_preview": "Vista previa en vivo"
+  },
+  "aria": {
+    "toggle_theme": "Cambiar tema",
+    "open_github": "Abrir GitHub"
+  },
+  "common": {
+    "how": "Cómo obtener"
+  },
+  "hero": {
+    "eyebrow": "Sin editar config.yml a mano",
+    "title": "Genera una configuración perfecta para tu bot de Ballsdex",
+    "subtitle_html": "Exporta tu <span class=\"kbd\">config.yml</span>. Si tienes dudas, pregunta en el <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">servidor de desarrollo</a>."
+  },
+  "form": {
+    "reset": "Restablecer",
+    "autosave": "Autoguardado • Activado",
+    "sections": {
+      "basic": "Básico",
+      "about": "Acerca de",
+      "game": "Juego",
+      "admin": "Administración",
+      "admin_panel": "Panel de administración",
+      "game_messages": "Mensajes del juego"
+    },
+    "fields": {
+      "discord_token": "Token del bot de Discord",
+      "discord_token_placeholder": "Pega tu token",
+      "discord_token_help_html": "Desde el Portal de Desarrolladores de Discord (<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">Cómo obtener</a>)<br>Si prefieres pegar el token directamente en el archivo, puedes dejar este campo en blanco.",
+      "text_prefix": "Prefijo de comandos de texto",
+      "text_prefix_help": "Prefijo para comandos de texto heredados",
+      "description": "Descripción",
+      "github_link": "Enlace de GitHub",
+      "discord_invite": "Enlace de invitación de Discord",
+      "terms": "Términos del servicio",
+      "privacy": "Política de privacidad",
+      "collectible_name": "Nombre del coleccionable",
+      "plural_collectible_name": "Nombre del coleccionable (plural)",
+      "bot_name": "Nombre del bot",
+      "players_group": "Nombre del grupo de comandos de jugadores",
+      "fav_emoji": "Emoji para coleccionable favorito",
+      "max_favorites": "Máximo de favoritos",
+      "max_attack_bonus": "Bonificación máxima de ataque",
+      "max_health_bonus": "Bonificación máxima de vida",
+      "guild_ids": "IDs de servidores",
+      "guild_ids_placeholder": "Un ID por línea",
+      "root_roles": "IDs de roles de administrador root",
+      "admin_roles": "IDs de roles de administrador",
+      "roles_placeholder": "Un ID de rol por línea",
+      "log_channel": "ID del canal de registros",
+      "log_channel_placeholder": "ID del canal de logs",
+      "log_channel_help": "Introduce el ID del canal de Discord para los registros de moderación",
+      "client_id": "Client ID de la aplicación de Discord",
+      "client_secret": "Client Secret de la aplicación de Discord",
+      "webhook_url": "URL del webhook",
+      "admin_panel_url": "URL del panel de administración",
+      "available_vars": "Variables disponibles:",
+      "spawn_min": "Aparición mínima (minutos)",
+      "spawn_max": "Aparición máxima (minutos)",
+      "catch_btn_label": "Etiqueta del botón de captura",
+      "caught_success": "Mensaje de captura exitosa",
+      "wrong_msg": "Mensaje de nombre incorrecto",
+      "spawn_msg": "Mensaje de aparición",
+      "slow_msg": "Mensaje de demasiado lento",
+      "multi_line_help": "Puedes introducir varios mensajes, uno por línea.",
+      "download_config": "Descargar config.yml",
+      "optional": "opcional",
+      "lines_to_items": "Cada línea se convierte en un elemento"
+    },
+    "errors": {
+      "only_lower_num_underscore": "Solo se permiten letras minúsculas, números y guiones bajos.",
+      "no_caps": "No se permiten mayúsculas.",
+      "no_spaces": "No se permiten espacios.",
+      "confirm_clear": "¿Borrar todos los campos?"
+    }
+  },
+  "preview": {
+    "file": "config.yml"
+  },
+  "footer": {
+    "notice": "El archivo generado",
+    "notice_tail": "puede estar desactualizado. Compáralo manualmente con el archivo generado por el programa para asegurar la exactitud."
+  }
+} 

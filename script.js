@@ -79,6 +79,7 @@ function collect(){
   data.wrongMessages = getLines('wrongMessages');
   data.spawnMessages = getLines('spawnMessages');
   data.slowMessages = getLines('slowMessages');
+  data.logChannel = document.getElementById('logChannel')?.value?.trim() || '';
   for(const k of Object.keys(data)){
     if(isNumericField(k) && data[k] !== ''){ data[k] = Number(data[k]); }
   }
@@ -172,7 +173,7 @@ function generateFullYAML(data) {
   yaml += `\n`;
   
   yaml += `# log channel for moderation actions\n`;
-  yaml += `log-channel:\n\n`;
+  yaml += `log-channel: ${data.logChannel || ''}\n\n`;
   
   yaml += `# manage bot ownership\n`;
   yaml += `owners:\n`;

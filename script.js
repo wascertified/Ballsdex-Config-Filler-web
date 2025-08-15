@@ -4,7 +4,12 @@
   const btn = document.getElementById('themeToggle');
 
   function apply(mode){
-    if(mode === 'auto'){ root.setAttribute('data-theme', 'auto'); btn.dataset.on = 'false'; return; }
+    if(mode === 'auto'){
+      root.setAttribute('data-theme', 'auto');
+      const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+      btn.dataset.on = isDark ? 'true' : 'false';
+      return;
+    }
     root.setAttribute('data-theme', mode); btn.dataset.on = (mode==='dark');
   }
   function init(){

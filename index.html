@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="auto">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BallsDex Config Filler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/x-icon" href="icon/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/ajv@8/dist/ajv.min.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="sitebar">
+      <div class="brand" aria-label="BallsDex Config">
+        <div class="logo" aria-hidden="true"><img src="icon/favicon.ico" alt="Logo" style="width: 32px; height: 32px;" /></div>
+        <div>
+          <h1>BallsDex Config Filler</h1>
+          <small>Purely static. By Ray Hsueh.</small>
+        </div>
+      </div>
+      <div class="hdr-actions">
+        <span class="pill" title="Tokens stay in your browser">Privacy: local-only</span>
+        <div class="sep" role="presentation"></div>
+        <div class="switch" id="themeSwitch">
+          <span aria-hidden="true">🌞</span>
+          <button class="toggle" id="themeToggle" aria-label="Toggle theme" data-on="false"><span class="knob"></span></button>
+          <span aria-hidden="true">🌚</span>
+        </div>
+        <a class="btn ghost" href="#" id="githubLinkBtn" aria-label="Open GitHub"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 .2A7.8 7.8 0 0 0 .1 8.1c0 3.4 2.2 6.2 5.2 7.2.4.1.5-.2.5-.4v-1.7c-2.1.5-2.6-1-2.6-1-.4-.9-.9-1.1-.9-1.1-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.8 2.4.6.1-.5.3-.8.5-1-1.7-.2-3.4-.9-3.4-3.9 0-.9.3-1.6.8-2.2 0-.2-.4-1 .1-2.2 0 0 .7-.2 2.3.8.7-.2 1.4-.3 2.2-.3s1.5.1 2.2.3c1.6-1.1 2.3-.8 2.3-.8.5 1.2.2 2 .1 2.2.5.6.8 1.3.8 2.2 0 3-1.8 3.7-3.4 3.9.3.3.5.7.5 1.3v1.9c0 .2.1.5.5.4 3-1 5.2-3.8 5.2-7.2A7.8 7.8 0 0 0 8 .2z"/></svg></a>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="h-title">
+      <div class="eyebrow">No config.yml hand‑editing</div>
+      <h2 class="title" id="h-title">Generate a perfect config for your Ballsdex bot</h2>
+      <p class="subtitle">Export your <span class="kbd">config.yml</span>. If you have any questions, ask in <a href="https://discord.gg/pcqyRNjvua" target="_blank" rel="noopener">dev server</a>.</p>
+    </section>
+
+    <div class="grid" style="container-type:inline-size">
+      <article class="panel" aria-label="Form">
+        <div class="head">
+          <div class="toolbar">
+            <span class="badge" title="Fields auto-save to your browser">Autosave • On</span>
+          </div>
+          <div class="toolbar">
+            <button class="btn" id="resetBtn" type="button">Reset</button>
+            <button class="btn primary" id="downloadBtn" type="button">Download config.yml</button>
+          </div>
+        </div>
+        <form id="configForm" class="form">
+          <div class="section">
+            <h3><span class="dot"></span> Basic</h3>
+            <div class="grid-fields">
+              <div class="col-6">
+                <label for="discordToken">Discord Bot Token</label>
+                <input type="password" id="discordToken" name="discordToken" placeholder="Paste your token" required />
+                <div class="help">From Discord Developer Portal (<a href="https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token" target="_blank" rel="noopener">How</a>)<br>If you prefer to paste the token directly into the file, you may leave this blank.</div>
+              </div>
+              <div class="col-6">
+                <label for="textPrefix">Text Command Prefix</label>
+                <input type="text" id="textPrefix" name="textPrefix" value="b." />
+                <div class="help">Prefix for legacy text commands</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3><span class="dot"></span> About</h3>
+            <div class="grid-fields">
+              <div class="col-12">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" rows="3">Collect countryballs on Discord, exchange them and battle with friends!</textarea>
+              </div>
+              <div class="col-6">
+                <label for="githubLink">GitHub Link</label>
+                <input type="url" id="githubLink" name="githubLink" value="https://github.com/laggron42/BallsDex-DiscordBot" />
+              </div>
+              <div class="col-6">
+                <label for="discordInvite">Discord Invite Link</label>
+                <input type="url" id="discordInvite" name="discordInvite" placeholder="https://discord.gg/YOUR_INVITE_CODE" />
+              </div>
+              <div class="col-6">
+                <label for="termsOfService">Terms of Service</label>
+                <input type="url" id="termsOfService" name="termsOfService" placeholder="https://your-terms.com" />
+              </div>
+              <div class="col-6">
+                <label for="privacyPolicy">Privacy Policy</label>
+                <input type="url" id="privacyPolicy" name="privacyPolicy" placeholder="https://your-privacy.com" />
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3><span class="dot"></span> Game</h3>
+            <div class="grid-fields">
+              <div class="col-6">
+                <label for="collectibleName">Collectible Name</label>
+                <input type="text" id="collectibleName" name="collectibleName" value="countryball" />
+              </div>
+              <div class="col-6">
+                <label for="pluralCollectibleName">Plural Collectible Name</label>
+                <input type="text" id="pluralCollectibleName" name="pluralCollectibleName" value="countryballs" />
+              </div>
+              <div class="col-6">
+                <label for="botName">Bot Name</label>
+                <input type="text" id="botName" name="botName" value="BallsDex" />
+              </div>
+              <div class="col-6">
+                <label for="playersGroupCogName">Players Group Command Name</label>
+                <input type="text" id="playersGroupCogName" name="playersGroupCogName" value="balls" />
+              </div>
+              <div class="col-6">
+                <label for="favoritedCollectibleEmoji">Favorited Collectible Emoji</label>
+                <input type="text" id="favoritedCollectibleEmoji" name="favoritedCollectibleEmoji" value="❤️" />
+              </div>
+              <div class="col-6">
+                <label for="maxFavorites">Max Favorites</label>
+                <input type="number" id="maxFavorites" name="maxFavorites" value="50" min="1" max="1000" />
+              </div>
+              <div class="col-6">
+                <label for="maxAttackBonus">Max Attack Bonus</label>
+                <input type="number" id="maxAttackBonus" name="maxAttackBonus" value="20" min="0" max="100" />
+              </div>
+              <div class="col-6">
+                <label for="maxHealthBonus">Max Health Bonus</label>
+                <input type="number" id="maxHealthBonus" name="maxHealthBonus" value="20" min="0" max="100" />
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3><span class="dot"></span> Admin</h3>
+            <div class="grid-fields">
+              <div class="col-12">
+                <label for="guildIds">Guild IDs <a href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <textarea id="guildIds" name="guildIds" rows="3" placeholder="One ID per line"></textarea>
+                <div class="help">Each line becomes one item</div>
+              </div>
+              <div class="col-6">
+                <label for="rootRoleIds">Root Admin Role IDs <a href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <textarea id="rootRoleIds" name="rootRoleIds" rows="3" placeholder="One role ID per line"></textarea>
+              </div>
+              <div class="col-6">
+                <label for="adminRoleIds">Admin Role IDs <a href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
+                <textarea id="adminRoleIds" name="adminRoleIds" rows="3" placeholder="One role ID per line"></textarea>
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3><span class="dot"></span> Admin Panel <small style="font-weight:normal;color:#888;">optional</small></h3>
+            <div class="grid-fields">
+              <div class="col-6">
+                <label for="clientId">Discord Application Client ID</label>
+                <input type="text" id="clientId" name="clientId" />
+              </div>
+              <div class="col-6">
+                <label for="clientSecret">Discord Application Client Secret</label>
+                <input type="password" id="clientSecret" name="clientSecret" />
+              </div>
+              <div class="col-6">
+                <label for="webhookUrl">Webhook URL</label>
+                <input type="url" id="webhookUrl" name="webhookUrl" />
+              </div>
+              <div class="col-6">
+                <label for="adminPanelUrl">Admin Panel URL</label>
+                <input type="url" id="adminPanelUrl" name="adminPanelUrl" value="http://localhost:8000" />
+              </div>
+            </div>
+          </div>
+
+          <div class="section">
+            <h3><span class="dot"></span> Game Messages</h3>
+            <div class="note" style="font-size:0.95em;color:#888;margin-bottom:8px;">Available variables: <span class="kbd">{user}</span> <span class="kbd">{ball}</span> <span class="kbd">{collectible}</span> <span class="kbd">{wrong}</span></div>
+            <div class="grid-fields">
+              <div class="col-6">
+                <label for="catchButtonLabel">Catch Button Label</label>
+                <input type="text" id="catchButtonLabel" name="catchButtonLabel" value="Catch me!" />
+              </div>
+              <div class="col-12">
+                <label for="caughtMessages">Caught Success Message</label>
+                <textarea id="caughtMessages" name="caughtMessages" rows="2">{user} You caught **{ball}**!</textarea>
+                <div class="help">You can enter multiple messages, one per line.</div>
+              </div>
+              <div class="col-12">
+                <label for="wrongMessages">Wrong Name Message</label>
+                <textarea id="wrongMessages" name="wrongMessages" rows="2">{user} Wrong name!</textarea>
+                <div class="help">You can enter multiple messages, one per line.</div>
+              </div>
+              <div class="col-12">
+                <label for="spawnMessages">Spawn Message</label>
+                <textarea id="spawnMessages" name="spawnMessages" rows="2">A wild {collectible} appeared!</textarea>
+                <div class="help">You can enter multiple messages, one per line.</div>
+              </div>
+              <div class="col-12">
+                <label for="slowMessages">Too Slow Message</label>
+                <textarea id="slowMessages" name="slowMessages" rows="2">{user} Sorry, this {collectible} was caught already!</textarea>
+                <div class="help">You can enter multiple messages, one per line.</div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </article>
+
+      <aside class="panel preview" aria-label="config.yml preview">
+        <div class="head">
+          <strong>config.yml</strong>
+          <div class="toolbar">
+            <span class="badge">Live Preview</span>
+          </div>
+        </div>
+        <pre id="yamlOut" aria-live="polite"></pre>
+        <div class="actions">
+        </div>
+        <p class="note">Tip: Press <span class="kbd">Ctrl</span> + <span class="kbd">S</span> to download.</p>
+      </aside>
+    </div>
+
+    <footer class="foot">
+      The generated <span class="kbd">config.yml</span> may be outdated. Please review it manually to ensure accuracy.
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 

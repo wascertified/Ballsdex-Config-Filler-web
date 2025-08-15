@@ -180,9 +180,12 @@ function generateFullYAML(data) {
   yaml += `# manage bot ownership\n`;
   yaml += `owners:\n`;
   yaml += `  # if enabled and the application is under a team, all team members will be considered as owners\n`;
-  yaml += `  team-members-are-owners: false\n\n`;
+  yaml += `  team-members-are-owners: false\n`;
+  yaml += `\n`;
   yaml += `  # a list of IDs that must be considered owners in addition to the application/team owner\n`;
-  yaml += `  co-owners:\n\n`;
+  yaml += `  co-owners:\n`;
+  yaml += `\n`;
+  yaml += `\n`;
   
   yaml += `# Admin panel related settings\n`;
   yaml += `admin-panel:\n\n`;
@@ -252,6 +255,7 @@ function generateFullYAML(data) {
   yaml += `  # here and only here, you can use {wrong} to show the wrong name that was entered\n`;
   yaml += `  # note that a user can put whatever they want into that field, so be careful\n`;
   yaml += `  wrong_msgs:\n`;
+  yaml += `    # - {user} Wrong name! You put: {wrong}\n`;
   if (data.wrongMessages && data.wrongMessages.length > 0) {
     data.wrongMessages.forEach(msg => {
       yaml += `    - "${msg}"\n`;
@@ -286,10 +290,59 @@ function generateFullYAML(data) {
   return yaml;
 }
 
+const fieldToYamlLine = {
+  discordToken: 4,
+  textPrefix: 7,
+  description: 15,
+  githubLink: 18,
+  discordInvite: 21,
+  termsOfService: 23,
+  privacyPolicy: 24,
+  collectibleName: 28,
+  pluralCollectibleName: 32,
+  botName: 36,
+  playersGroupCogName: 40,
+  favoritedCollectibleEmoji: 43,
+  maxFavorites: 46,
+  maxAttackBonus: 50,
+  maxHealthBonus: 54,
+  guildIds: 65,
+  rootRoleIds: 68,
+  adminRoleIds: 71,
+  logChannel: 74,
+  clientId: 90,
+  clientSecret: 92,
+  webhookUrl: 95,
+  adminPanelUrl: 99,
+  catchButtonLabel: 137,
+  caughtMessages: 140,
+  wrongMessages: 146,
+  spawnMessages: 152,
+  slowMessages: 156,
+  spawnChanceMin: 120,
+  spawnChanceMax: 120
+};
+let currentHighlight = null;
+function highlightYamlLine(line) {
+  clearYamlHighlight();
+  const el = document.querySelector(`#yamlOut span[data-line='${line}']`);
+  if (el) {
+    el.classList.add('yaml-highlight');
+    currentHighlight = el;
+    el.scrollIntoView({block:'center',behavior:'smooth'});
+  }
+}
+function clearYamlHighlight() {
+  if (currentHighlight) {
+    currentHighlight.classList.remove('yaml-highlight');
+    currentHighlight = null;
+  }
+}
 function render(){
   const data = collect();
   const yaml = generateFullYAML(data);
-  out.textContent = yaml;
+  // 將每行包成 span，方便高亮
+  out.innerHTML = yaml.split('\n').map((line,i)=>`<span data-line='${i+1}'>${line.replace(/ /g,'&nbsp;')}</span>`).join('\n');
   localStorage.setItem(STORE_KEY, JSON.stringify(data));
   const gh = (data.githubLink||'').trim();
   ghBtn.href = gh || '#';
@@ -385,3 +438,14 @@ button:disabled { opacity:0.5; cursor:not-allowed; }
 `;
   document.head.appendChild(style);
 } 
+
+// 為所有表單欄位加上 focus/blur 事件
+window.addEventListener('DOMContentLoaded',()=>{
+  Object.keys(fieldToYamlLine).forEach(field=>{
+    const el = document.getElementsByName(field)[0];
+    if(el){
+      el.addEventListener('focus',()=>highlightYamlLine(fieldToYamlLine[field]));
+      el.addEventListener('blur',clearYamlHighlight);
+    }
+  });
+}); 

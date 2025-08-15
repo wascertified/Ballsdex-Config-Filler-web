@@ -127,3 +127,10 @@ input:focus, textarea:focus{ border-color: color-mix(in oklab, var(--accent-500)
   transform: scale(1.045);
   box-shadow: 0 8px 28px color-mix(in oklab, var(--accent-600) 38%, transparent);
 } 
+
+.yaml-highlight {
+  background: color-mix(in oklab, var(--accent-500) 18%, var(--surface));
+  border-radius: 8px;
+  transition: background 0.2s;
+  color: #fff;
+} 

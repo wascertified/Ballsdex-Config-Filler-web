@@ -80,6 +80,8 @@ function collect(){
   data.spawnMessages = getLines('spawnMessages');
   data.slowMessages = getLines('slowMessages');
   data.logChannel = document.getElementById('logChannel')?.value?.trim() || '';
+  data.spawnChanceMin = Number(document.getElementById('spawnChanceMin')?.value) || 40;
+  data.spawnChanceMax = Number(document.getElementById('spawnChanceMax')?.value) || 55;
   for(const k of Object.keys(data)){
     if(isNumericField(k) && data[k] !== ''){ data[k] = Number(data[k]); }
   }
@@ -216,7 +218,7 @@ function generateFullYAML(data) {
   yaml += `# spawn chance range\n`;
   yaml += `# with the default spawn manager, this is *approximately* the min/max number of minutes\n`;
   yaml += `# until spawning a countryball, before processing activity\n`;
-  yaml += `spawn-chance-range: [40, 55]\n\n`;
+  yaml += `spawn-chance-range: [${data.spawnChanceMin || 40}, ${data.spawnChanceMax || 55}]\n\n`;
   
   yaml += `spawn-manager: ballsdex.packages.countryballs.spawn.SpawnManager\n\n`;
   

@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "BallsDex Config Filler",
-    "subtitle": "Purely static. By Ray Hsueh.",
+    "subtitle": "Purely static. By <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>.",
     "privacy": "Privacy: local-only",
     "use_desktop_title": "Please use a computer to view this page",
     "use_desktop_desc": "This tool is only compatible with desktop browsers and may not display properly on mobile devices.",

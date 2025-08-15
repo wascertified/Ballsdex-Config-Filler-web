@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "Generador de config de BallsDex",
-    "subtitle": "Sitio estático puro. Por Ray Hsueh.",
+    "subtitle": "Sitio estático puro. Por <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>.",
     "privacy": "Privacidad: solo local",
     "use_desktop_title": "Usa una computadora para ver esta página",
     "use_desktop_desc": "Esta herramienta solo es compatible con navegadores de escritorio y puede no mostrarse correctamente en dispositivos móviles.",

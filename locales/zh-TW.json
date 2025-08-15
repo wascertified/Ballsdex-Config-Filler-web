@@ -1,7 +1,7 @@
 {
   "app": {
     "title": "BallsDex 設定檔產生器",
-    "subtitle": "純前端頁面．Ray Hsueh出品",
+    "subtitle": "純前端頁面．<a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>出品",
     "privacy": "保護您的隱私隱私：僅儲存在本機瀏覽器",
     "use_desktop_title": "請使用電腦瀏覽本頁面",
     "use_desktop_desc": "此工具僅支援桌面版瀏覽器，行動裝置可能顯示不正常。",

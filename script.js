@@ -348,7 +348,7 @@ function download(){
   const blob = new Blob([out.textContent], {type:'text/yaml'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
-  a.href = url; a.download = 'config.yaml';
+  a.href = url; a.download = 'config.yml';
   document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
 }
 

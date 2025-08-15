@@ -122,3 +122,8 @@ input:focus, textarea:focus{ border-color: color-mix(in oklab, var(--accent-500)
 [data-theme="light"] .btn.primary {
   color: var(--text);
 } 
+.btn.primary:hover {
+  filter: brightness(1.08);
+  transform: scale(1.045);
+  box-shadow: 0 8px 28px color-mix(in oklab, var(--accent-600) 38%, transparent);
+} 

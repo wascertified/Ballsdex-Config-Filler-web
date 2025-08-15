@@ -134,3 +134,8 @@ input:focus, textarea:focus{ border-color: color-mix(in oklab, var(--accent-500)
   transition: background 0.2s;
   color: #fff;
 } 
+[data-theme="light"] .preview pre {
+  background: #f5f7fa;
+  color: #23272f;
+  border-top: 1px solid var(--line);
+} 

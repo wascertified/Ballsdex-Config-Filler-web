@@ -453,7 +453,17 @@ window.addEventListener('DOMContentLoaded',()=>{
   const langLabel = document.getElementById('langLabel');
 
   function updateLabel(code){
-    langLabel.textContent = code === 'zh-TW' ? '繁體中文' : (code === 'es' ? 'Español' : 'English');
+    const langNames = {
+      'en': 'English',
+      'zh-TW': '繁體中文',
+      'es': 'Español',
+      'fr': 'Français',
+      'ar': 'العربية',
+      'hi': 'हिन्दी',
+      'ur': 'اردو',
+      'ja': '日本語'
+    };
+    langLabel.textContent = langNames[code] || 'English';
     Array.from(langList.children).forEach(li=>{
       li.setAttribute('aria-selected', li.dataset.value === code ? 'true' : 'false');
     });
@@ -476,7 +486,13 @@ window.addEventListener('DOMContentLoaded',()=>{
   window.addEventListener('i18n:changed', (ev)=>{ updateLabel(ev.detail.lang); });
 
   const nav = (navigator.language||'en').toLowerCase();
-  const initial = nav.startsWith('zh') ? 'zh-TW' : (nav.startsWith('es') ? 'es' : 'en');
+  const initial = nav.startsWith('zh') ? 'zh-TW' : 
+                 nav.startsWith('es') ? 'es' : 
+                 nav.startsWith('fr') ? 'fr' : 
+                 nav.startsWith('ar') ? 'ar' : 
+                 nav.startsWith('hi') ? 'hi' : 
+                 nav.startsWith('ur') ? 'ur' : 
+                 nav.startsWith('ja') ? 'ja' : 'en';
   if(window.i18n){
     updateLabel(window.i18n.lang);
   } else {

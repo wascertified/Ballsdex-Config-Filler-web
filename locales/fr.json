@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "Générateur de Configuration BallsDex",
+    "subtitle": "Purement statique. Par <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>.",
+    "privacy": "Confidentialité : local uniquement",
+    "use_desktop_title": "Veuillez utiliser un ordinateur pour voir cette page",
+    "use_desktop_desc": "Cet outil n'est compatible qu'avec les navigateurs de bureau et peut ne pas s'afficher correctement sur les appareils mobiles.",
+    "tip_download": "Astuce : Appuyez sur Ctrl + S pour télécharger.",
+    "live_preview": "Aperçu en Direct"
+  },
+  "aria": {
+    "toggle_theme": "Basculer le thème",
+    "open_github": "Ouvrir GitHub"
+  },
+  "common": {
+    "how": "Comment"
+  },
+  "hero": {
+    "eyebrow": "Pas d'édition manuelle de config.yml",
+    "title": "Générez une configuration parfaite pour votre bot Ballsdex",
+    "subtitle_html": "Exportez votre <span class=\"kbd\">config.yml</span>. Si vous avez des questions, demandez dans le <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">serveur de développement</a>."
+  },
+  "form": {
+    "reset": "Réinitialiser",
+    "autosave": "Sauvegarde automatique • Activée",
+    "sections": {
+      "basic": "Basique",
+      "about": "À propos",
+      "game": "Jeu",
+      "admin": "Administration",
+      "admin_panel": "Panneau d'Administration",
+      "game_messages": "Messages de Jeu"
+    },
+    "fields": {
+      "discord_token": "Token du Bot Discord",
+      "discord_token_placeholder": "Collez votre token",
+      "discord_token_help_html": "Depuis le Portail développeur Discord (<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">Comment faire</a>)<br>Si vous préférez coller le token directement dans le fichier, vous pouvez laisser ce champ vide.",
+      "text_prefix": "Préfixe de Commande Texte",
+      "text_prefix_help": "Préfixe pour les commandes texte héritées",
+      "description": "Description",
+      "github_link": "Lien GitHub",
+      "discord_invite": "Lien d'Invitation Discord",
+      "terms": "Conditions d'Utilisation",
+      "privacy": "Politique de Confidentialité",
+      "collectible_name": "Nom du Collectible",
+      "plural_collectible_name": "Nom Pluriel du Collectible",
+      "bot_name": "Nom du Bot",
+      "players_group": "Nom de la Commande Groupe Joueurs",
+      "fav_emoji": "Emoji du Collectible Favori",
+      "max_favorites": "Favoris Maximum",
+      "max_attack_bonus": "Bonus d'Attaque Maximum",
+      "max_health_bonus": "Bonus de Santé Maximum",
+      "guild_ids": "IDs des Serveurs",
+      "guild_ids_placeholder": "Un ID par ligne",
+      "root_roles": "IDs des Rôles Admin Racine",
+      "admin_roles": "IDs des Rôles Admin",
+      "roles_placeholder": "Un ID de rôle par ligne",
+      "log_channel": "ID du Canal de Logs",
+      "log_channel_placeholder": "ID du canal de logs",
+      "log_channel_help": "Entrez l'ID du canal Discord pour les logs de modération",
+      "client_id": "ID Client de l'Application Discord",
+      "client_secret": "Secret Client de l'Application Discord",
+      "webhook_url": "URL du Webhook",
+      "admin_panel_url": "URL du Panneau d'Administration",
+      "available_vars": "Variables disponibles :",
+      "spawn_min": "Chance d'Apparition Min (minutes)",
+      "spawn_max": "Chance d'Apparition Max (minutes)",
+      "catch_btn_label": "Libellé du Bouton Attraper",
+      "caught_success": "Message de Succès Attrapé",
+      "wrong_msg": "Message Nom Incorrect",
+      "spawn_msg": "Message d'Apparition",
+      "slow_msg": "Message Trop Lent",
+      "multi_line_help": "Vous pouvez entrer plusieurs messages, un par ligne.",
+      "download_config": "Télécharger config.yml",
+      "optional": "optionnel",
+      "lines_to_items": "Chaque ligne devient un élément"
+    },
+    "errors": {
+      "only_lower_num_underscore": "Seules les lettres minuscules, chiffres et tirets bas sont autorisés.",
+      "no_caps": "Aucune lettre majuscule autorisée.",
+      "no_spaces": "Aucun espace autorisé.",
+      "confirm_clear": "Effacer tous les champs ?"
+    }
+  },
+  "preview": {
+    "file": "config.yml"
+  },
+  "footer": {
+    "notice": "Le fichier généré",
+    "notice_tail": "peut être obsolète. Veuillez le vérifier manuellement avec le fichier généré par le programme pour assurer l'exactitude."
+  }
+} 

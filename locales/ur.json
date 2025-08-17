@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "BallsDex کنفیگ جنریٹر",
+    "subtitle": "مکمل طور پر سٹیٹک۔ <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a> کی طرف سے۔",
+    "privacy": "رازداری: صرف مقامی",
+    "use_desktop_title": "براہ کرم اس صفحے کو دیکھنے کے لیے کمپیوٹر استعمال کریں",
+    "use_desktop_desc": "یہ ٹول صرف ڈیسک ٹاپ براؤزر کے ساتھ مطابقت رکھتا ہے اور موبائل آلات پر درست طریقے سے ظاہر نہیں ہو سکتا۔",
+    "tip_download": "ٹپ: ڈاؤن لوڈ کے لیے Ctrl + S دبائیں۔",
+    "live_preview": "لائیو پیش نظارہ"
+  },
+  "aria": {
+    "toggle_theme": "تھیم تبدیل کریں",
+    "open_github": "GitHub کھولیں"
+  },
+  "common": {
+    "how": "کیسے"
+  },
+  "hero": {
+    "eyebrow": "کوئی config.yml ہاتھ سے ترمیم نہیں",
+    "title": "اپنے Ballsdex بوٹ کے لیے مکمل کنفیگ بنائیں",
+    "subtitle_html": "اپنی <span class=\"kbd\">config.yml</span> برآمد کریں۔ اگر آپ کے کوئی سوالات ہیں تو <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">ڈیو سرور</a> میں پوچھیں۔"
+  },
+  "form": {
+    "reset": "ری سیٹ",
+    "autosave": "آٹو سیو • آن",
+    "sections": {
+      "basic": "بنیادی",
+      "about": "کے بارے میں",
+      "game": "کھیل",
+      "admin": "انتظامیہ",
+      "admin_panel": "انتظامیہ پینل",
+      "game_messages": "کھیل کے پیغامات"
+    },
+    "fields": {
+      "discord_token": "Discord بوٹ ٹوکن",
+      "discord_token_placeholder": "اپنا ٹوکن پیسٹ کریں",
+      "discord_token_help_html": "Discord ڈویلپر پورٹل سے (<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">کیسے</a>)<br>اگر آپ ٹوکن کو براہ راست فائل میں پیسٹ کرنا پسند کرتے ہیں تو آپ اسے خالی چھوڑ سکتے ہیں۔",
+      "text_prefix": "ٹیکسٹ کمانڈ پریفکس",
+      "text_prefix_help": "پرانی ٹیکسٹ کمانڈز کے لیے پریفکس",
+      "description": "تفصیل",
+      "github_link": "GitHub لنک",
+      "discord_invite": "Discord دعوت لنک",
+      "terms": "سروس کی شرائط",
+      "privacy": "رازداری کی پالیسی",
+      "collectible_name": "جمع کرنے والی چیز کا نام",
+      "plural_collectible_name": "جمع جمع کرنے والی چیز کا نام",
+      "bot_name": "بوٹ کا نام",
+      "players_group": "کھلاڑیوں گروپ کمانڈ کا نام",
+      "fav_emoji": "پسندیدہ جمع کرنے والی چیز کا ایموجی",
+      "max_favorites": "زیادہ سے زیادہ پسندیدہ",
+      "max_attack_bonus": "زیادہ سے زیادہ حملہ بونس",
+      "max_health_bonus": "زیادہ سے زیادہ صحت بونس",
+      "guild_ids": "سرور آئی ڈیز",
+      "guild_ids_placeholder": "ایک آئی ڈی فی لائن",
+      "root_roles": "روٹ ایڈمن رول آئی ڈیز",
+      "admin_roles": "ایڈمن رول آئی ڈیز",
+      "roles_placeholder": "ایک رول آئی ڈی فی لائن",
+      "log_channel": "لاگ چینل آئی ڈی",
+      "log_channel_placeholder": "لاگ چینل آئی ڈی",
+      "log_channel_help": "نگرانی کے لاگز کے لیے Discord چینل آئی ڈی درج کریں",
+      "client_id": "Discord ایپلیکیشن کلائنٹ آئی ڈی",
+      "client_secret": "Discord ایپلیکیشن کلائنٹ سیکریٹ",
+      "webhook_url": "ویب ہک URL",
+      "admin_panel_url": "ایڈمن پینل URL",
+      "available_vars": "دستیاب متغیرات:",
+      "spawn_min": "اسپان چانس مین (منٹ)",
+      "spawn_max": "اسپان چانس میکس (منٹ)",
+      "catch_btn_label": "کیچ بٹن لیبل",
+      "caught_success": "پکڑا گیا کامیابی کا پیغام",
+      "wrong_msg": "غلط نام کا پیغام",
+      "spawn_msg": "اسپان پیغام",
+      "slow_msg": "بہت سست پیغام",
+      "multi_line_help": "آپ متعدد پیغامات درج کر سکتے ہیں، ایک فی لائن۔",
+      "download_config": "config.yml ڈاؤن لوڈ کریں",
+      "optional": "اختیاری",
+      "lines_to_items": "ہر لائن ایک آئٹم بن جاتی ہے"
+    },
+    "errors": {
+      "only_lower_num_underscore": "صرف چھوٹے حروف، اعداد اور انڈر سکور کی اجازت ہے۔",
+      "no_caps": "بڑے حروف کی اجازت نہیں ہے۔",
+      "no_spaces": "خالی جگہوں کی اجازت نہیں ہے۔",
+      "confirm_clear": "تمام فیلڈز صاف کریں؟"
+    }
+  },
+  "preview": {
+    "file": "config.yml"
+  },
+  "footer": {
+    "notice": "تیار کردہ فائل",
+    "notice_tail": "پرانی ہو سکتی ہے۔ براہ کرم درستگی کو یقینی بنانے کے لیے اسے پروگرام سے تیار کردہ فائل کے ساتھ دستی طور پر کراس چیک کریں۔"
+  }
+} 

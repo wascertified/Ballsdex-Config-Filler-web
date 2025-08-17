@@ -34,7 +34,7 @@
     "fields": {
       "discord_token": "Discord 機器人 Token",
       "discord_token_placeholder": "貼上你的 token",
-      "discord_token_help_html": "從 Discord 開發者後台（<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">如何取得</a>）<br>若你想直接在檔案內貼上 token，可以將此欄留空。",
+      "discord_token_help_html": "從 Discord 開發者入口網站（<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">如何取得</a>）<br>若你想直接在檔案內貼上 token，可以將此欄留空。",
       "text_prefix": "文字指令前綴",
       "text_prefix_help": "舊式文字指令的前綴",
       "description": "描述",

@@ -1,7 +1,7 @@
 (function(){
   const I18N_STORE_KEY = 'bdx_lang';
   const DEFAULT_LANG = 'en';
-  const SUPPORTED = ['en','zh-TW','es'];
+  const SUPPORTED = ['en','zh-TW','es','fr','ar','hi','ur','ja'];
   let current = null;
   let dict = {};
   let readyResolve;
@@ -13,6 +13,11 @@
     const nav = (navigator.language || 'en').toLowerCase();
     if(nav.startsWith('zh')) return 'zh-TW';
     if(nav.startsWith('es')) return 'es';
+    if(nav.startsWith('fr')) return 'fr';
+    if(nav.startsWith('ar')) return 'ar';
+    if(nav.startsWith('hi')) return 'hi';
+    if(nav.startsWith('ur')) return 'ur';
+    if(nav.startsWith('ja')) return 'ja';
     return DEFAULT_LANG;
   }
 

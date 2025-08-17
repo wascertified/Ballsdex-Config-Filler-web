@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "مولد إعدادات BallsDex",
+    "subtitle": "ثابت تماماً. بواسطة <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>.",
+    "privacy": "الخصوصية: محلي فقط",
+    "use_desktop_title": "يرجى استخدام جهاز كمبيوتر لعرض هذه الصفحة",
+    "use_desktop_desc": "هذه الأداة متوافقة فقط مع متصفحات سطح المكتب وقد لا تعرض بشكل صحيح على الأجهزة المحمولة.",
+    "tip_download": "نصيحة: اضغط Ctrl + S للتحميل.",
+    "live_preview": "معاينة مباشرة"
+  },
+  "aria": {
+    "toggle_theme": "تبديل المظهر",
+    "open_github": "فتح GitHub"
+  },
+  "common": {
+    "how": "كيف"
+  },
+  "hero": {
+    "eyebrow": "لا تحرير يدوي لـ config.yml",
+    "title": "أنشئ إعدادات مثالية لروبوت Ballsdex الخاص بك",
+    "subtitle_html": "صدّر ملف <span class=\"kbd\">config.yml</span> الخاص بك. إذا كان لديك أي أسئلة، اسأل في <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">خادم المطورين</a>."
+  },
+  "form": {
+    "reset": "إعادة تعيين",
+    "autosave": "حفظ تلقائي • مفعل",
+    "sections": {
+      "basic": "أساسي",
+      "about": "حول",
+      "game": "اللعبة",
+      "admin": "الإدارة",
+      "admin_panel": "لوحة الإدارة",
+      "game_messages": "رسائل اللعبة"
+    },
+    "fields": {
+      "discord_token": "رمز بوت Discord",
+      "discord_token_placeholder": "الصق رمزك",
+      "discord_token_help_html": "من بوابة مطوري Discord (<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">كيفية</a>)<br>إذا كنت تفضل لصق الرمز مباشرة في الملف، يمكنك ترك هذا فارغاً.",
+      "text_prefix": "بادئة أمر النص",
+      "text_prefix_help": "بادئة لأوامر النص القديمة",
+      "description": "الوصف",
+      "github_link": "رابط GitHub",
+      "discord_invite": "رابط دعوة Discord",
+      "terms": "شروط الخدمة",
+      "privacy": "سياسة الخصوصية",
+      "collectible_name": "اسم العنصر القابل للجمع",
+      "plural_collectible_name": "اسم العنصر القابل للجمع (جمع)",
+      "bot_name": "اسم البوت",
+      "players_group": "اسم أمر مجموعة اللاعبين",
+      "fav_emoji": "رمز العنصر المفضل",
+      "max_favorites": "الحد الأقصى للمفضلة",
+      "max_attack_bonus": "الحد الأقصى لمكافأة الهجوم",
+      "max_health_bonus": "الحد الأقصى لمكافأة الصحة",
+      "guild_ids": "معرفات الخوادم",
+      "guild_ids_placeholder": "معرف واحد في كل سطر",
+      "root_roles": "معرفات أدوار المدير الجذر",
+      "admin_roles": "معرفات أدوار المدير",
+      "roles_placeholder": "معرف دور واحد في كل سطر",
+      "log_channel": "معرف قناة السجلات",
+      "log_channel_placeholder": "معرف قناة السجلات",
+      "log_channel_help": "أدخل معرف قناة Discord لسجلات الإشراف",
+      "client_id": "معرف عميل تطبيق Discord",
+      "client_secret": "سر عميل تطبيق Discord",
+      "webhook_url": "رابط Webhook",
+      "admin_panel_url": "رابط لوحة الإدارة",
+      "available_vars": "المتغيرات المتاحة:",
+      "spawn_min": "الحد الأدنى لفرصة الظهور (دقائق)",
+      "spawn_max": "الحد الأقصى لفرصة الظهور (دقائق)",
+      "catch_btn_label": "تسمية زر الالتقاط",
+      "caught_success": "رسالة النجاح عند الالتقاط",
+      "wrong_msg": "رسالة الاسم الخاطئ",
+      "spawn_msg": "رسالة الظهور",
+      "slow_msg": "رسالة البطء",
+      "multi_line_help": "يمكنك إدخال عدة رسائل، واحدة في كل سطر.",
+      "download_config": "تحميل config.yml",
+      "optional": "اختياري",
+      "lines_to_items": "كل سطر يصبح عنصراً واحداً"
+    },
+    "errors": {
+      "only_lower_num_underscore": "يُسمح فقط بالحروف الصغيرة والأرقام والشرطة السفلية.",
+      "no_caps": "لا يُسمح بالحروف الكبيرة.",
+      "no_spaces": "لا يُسمح بالمسافات.",
+      "confirm_clear": "مسح جميع الحقول؟"
+    }
+  },
+  "preview": {
+    "file": "config.yml"
+  },
+  "footer": {
+    "notice": "الملف المُنشأ",
+    "notice_tail": "قد يكون قديماً. يرجى التحقق منه يدوياً مع الملف المُنشأ بواسطة البرنامج لضمان الدقة."
+  }
+} 

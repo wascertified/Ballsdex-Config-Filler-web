@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "BallsDex कॉन्फ़िग जनरेटर",
+    "subtitle": "पूरी तरह से स्थिर। <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a> द्वारा।",
+    "privacy": "गोपनीयता: केवल स्थानीय",
+    "use_desktop_title": "कृपया इस पेज को देखने के लिए कंप्यूटर का उपयोग करें",
+    "use_desktop_desc": "यह टूल केवल डेस्कटॉप ब्राउज़र के साथ संगत है और मोबाइल उपकरणों पर सही तरीके से प्रदर्शित नहीं हो सकता है।",
+    "tip_download": "सुझाव: डाउनलोड के लिए Ctrl + S दबाएं।",
+    "live_preview": "लाइव प्रीव्यू"
+  },
+  "aria": {
+    "toggle_theme": "थीम बदलें",
+    "open_github": "GitHub खोलें"
+  },
+  "common": {
+    "how": "कैसे"
+  },
+  "hero": {
+    "eyebrow": "कोई config.yml हाथ से संपादन नहीं",
+    "title": "अपने Ballsdex बॉट के लिए एकदम सही कॉन्फ़िग बनाएं",
+    "subtitle_html": "अपनी <span class=\"kbd\">config.yml</span> निर्यात करें। यदि आपके कोई प्रश्न हैं, तो <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">डेव सर्वर</a> में पूछें।"
+  },
+  "form": {
+    "reset": "रीसेट",
+    "autosave": "ऑटोसेव • चालू",
+    "sections": {
+      "basic": "बुनियादी",
+      "about": "के बारे में",
+      "game": "खेल",
+      "admin": "प्रशासन",
+      "admin_panel": "प्रशासन पैनल",
+      "game_messages": "खेल संदेश"
+    },
+    "fields": {
+      "discord_token": "Discord बॉट टोकन",
+      "discord_token_placeholder": "अपना टोकन पेस्ट करें",
+      "discord_token_help_html": "Discord डेवलपर पोर्टल से (<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">कैसे</a>)<br>यदि आप टोकन को सीधे फ़ाइल में पेस्ट करना पसंद करते हैं, तो आप इसे खाली छोड़ सकते हैं।",
+      "text_prefix": "टेक्स्ट कमांड प्रीफिक्स",
+      "text_prefix_help": "पुराने टेक्स्ट कमांड के लिए प्रीफिक्स",
+      "description": "विवरण",
+      "github_link": "GitHub लिंक",
+      "discord_invite": "Discord आमंत्रण लिंक",
+      "terms": "सेवा की शर्तें",
+      "privacy": "गोपनीयता नीति",
+      "collectible_name": "संग्रहणीय नाम",
+      "plural_collectible_name": "बहुवचन संग्रहणीय नाम",
+      "bot_name": "बॉट नाम",
+      "players_group": "खिलाड़ियों समूह कमांड नाम",
+      "fav_emoji": "पसंदीदा संग्रहणीय इमोजी",
+      "max_favorites": "अधिकतम पसंदीदा",
+      "max_attack_bonus": "अधिकतम हमला बोनस",
+      "max_health_bonus": "अधिकतम स्वास्थ्य बोनस",
+      "guild_ids": "सर्वर आईडी",
+      "guild_ids_placeholder": "एक आईडी प्रति पंक्ति",
+      "root_roles": "रूट एडमिन रोल आईडी",
+      "admin_roles": "एडमिन रोल आईडी",
+      "roles_placeholder": "एक रोल आईडी प्रति पंक्ति",
+      "log_channel": "लॉग चैनल आईडी",
+      "log_channel_placeholder": "लॉग चैनल आईडी",
+      "log_channel_help": "मॉडरेशन लॉग के लिए Discord चैनल आईडी दर्ज करें",
+      "client_id": "Discord एप्लिकेशन क्लाइंट आईडी",
+      "client_secret": "Discord एप्लिकेशन क्लाइंट सीक्रेट",
+      "webhook_url": "Webhook URL",
+      "admin_panel_url": "एडमिन पैनल URL",
+      "available_vars": "उपलब्ध चर:",
+      "spawn_min": "स्पॉन चांस मिन (मिनट)",
+      "spawn_max": "स्पॉन चांस मैक्स (मिनट)",
+      "catch_btn_label": "कैच बटन लेबल",
+      "caught_success": "पकड़ा गया सफलता संदेश",
+      "wrong_msg": "गलत नाम संदेश",
+      "spawn_msg": "स्पॉन संदेश",
+      "slow_msg": "बहुत धीमा संदेश",
+      "multi_line_help": "आप कई संदेश दर्ज कर सकते हैं, एक प्रति पंक्ति।",
+      "download_config": "config.yml डाउनलोड करें",
+      "optional": "वैकल्पिक",
+      "lines_to_items": "प्रत्येक पंक्ति एक आइटम बन जाती है"
+    },
+    "errors": {
+      "only_lower_num_underscore": "केवल लोअरकेस अक्षर, संख्याएं और अंडरस्कोर की अनुमति है।",
+      "no_caps": "कैपिटल अक्षर की अनुमति नहीं है।",
+      "no_spaces": "स्पेस की अनुमति नहीं है।",
+      "confirm_clear": "सभी फ़ील्ड साफ़ करें?"
+    }
+  },
+  "preview": {
+    "file": "config.yml"
+  },
+  "footer": {
+    "notice": "जनरेट किया गया फ़ाइल",
+    "notice_tail": "पुराना हो सकता है। कृपया सटीकता सुनिश्चित करने के लिए इसे प्रोग्राम-जनरेटेड फ़ाइल के साथ मैन्युअल रूप से क्रॉस-चेक करें।"
+  }
+} 

@@ -1,0 +1,92 @@
+{
+  "app": {
+    "title": "BallsDex設定ジェネレーター",
+    "subtitle": "完全に静的。<a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>による。",
+    "privacy": "プライバシー：ローカルのみ",
+    "use_desktop_title": "このページを表示するにはコンピューターをご使用ください",
+    "use_desktop_desc": "このツールはデスクトップブラウザとのみ互換性があり、モバイルデバイスでは正しく表示されない場合があります。",
+    "tip_download": "ヒント：Ctrl + Sでダウンロード。",
+    "live_preview": "ライブプレビュー"
+  },
+  "aria": {
+    "toggle_theme": "テーマを切り替え",
+    "open_github": "GitHubを開く"
+  },
+  "common": {
+    "how": "方法"
+  },
+  "hero": {
+    "eyebrow": "config.ymlの手動編集不要",
+    "title": "Ballsdexボット用の完璧な設定を生成",
+    "subtitle_html": "<span class=\"kbd\">config.yml</span>をエクスポート。ご質問がある場合は<a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">開発サーバー</a>でお聞きください。"
+  },
+  "form": {
+    "reset": "リセット",
+    "autosave": "自動保存 • オン",
+    "sections": {
+      "basic": "基本",
+      "about": "概要",
+      "game": "ゲーム",
+      "admin": "管理",
+      "admin_panel": "管理パネル",
+      "game_messages": "ゲームメッセージ"
+    },
+    "fields": {
+      "discord_token": "Discordボットトークン",
+      "discord_token_placeholder": "トークンを貼り付け",
+      "discord_token_help_html": "Discord 開発者ポータルから（<a href=\"https://unified.to/blog/how_to_get_your_discord_oauth_2_credentials_and_bot_token#retrieve-your-discord-bot-token\" target=\"_blank\" rel=\"noopener\">方法</a>）<br>トークンをファイルに直接貼り付ける場合は、これを空白のままにできます。",
+      "text_prefix": "テキストコマンドプレフィックス",
+      "text_prefix_help": "レガシーテキストコマンド用のプレフィックス",
+      "description": "説明",
+      "github_link": "GitHubリンク",
+      "discord_invite": "Discord招待リンク",
+      "terms": "利用規約",
+      "privacy": "プライバシーポリシー",
+      "collectible_name": "コレクション名",
+      "plural_collectible_name": "コレクション名（複数形）",
+      "bot_name": "ボット名",
+      "players_group": "プレイヤーグループコマンド名",
+      "fav_emoji": "お気に入りコレクション絵文字",
+      "max_favorites": "最大お気に入り数",
+      "max_attack_bonus": "最大攻撃ボーナス",
+      "max_health_bonus": "最大体力ボーナス",
+      "guild_ids": "サーバーID",
+      "guild_ids_placeholder": "1行に1つのID",
+      "root_roles": "ルート管理者ロールID",
+      "admin_roles": "管理者ロールID",
+      "roles_placeholder": "1行に1つのロールID",
+      "log_channel": "ログチャンネルID",
+      "log_channel_placeholder": "ログチャンネルID",
+      "log_channel_help": "モデレーションログ用のDiscordチャンネルIDを入力",
+      "client_id": "DiscordアプリケーションクライアントID",
+      "client_secret": "Discordアプリケーションクライアントシークレット",
+      "webhook_url": "Webhook URL",
+      "admin_panel_url": "管理パネルURL",
+      "available_vars": "利用可能な変数：",
+      "spawn_min": "出現確率最小（分）",
+      "spawn_max": "出現確率最大（分）",
+      "catch_btn_label": "キャッチボタンラベル",
+      "caught_success": "キャッチ成功メッセージ",
+      "wrong_msg": "間違った名前メッセージ",
+      "spawn_msg": "出現メッセージ",
+      "slow_msg": "遅すぎるメッセージ",
+      "multi_line_help": "複数のメッセージを入力できます。1行に1つ。",
+      "download_config": "config.ymlをダウンロード",
+      "optional": "オプション",
+      "lines_to_items": "各行が1つのアイテムになります"
+    },
+    "errors": {
+      "only_lower_num_underscore": "小文字、数字、アンダースコアのみ許可されています。",
+      "no_caps": "大文字は許可されていません。",
+      "no_spaces": "スペースは許可されていません。",
+      "confirm_clear": "すべてのフィールドをクリアしますか？"
+    }
+  },
+  "preview": {
+    "file": "config.yml"
+  },
+  "footer": {
+    "notice": "生成されたファイル",
+    "notice_tail": "は古い可能性があります。正確性を確保するため、プログラム生成ファイルと手動で照合してください。"
+  }
+} 

@@ -483,3 +483,51 @@ window.addEventListener('DOMContentLoaded',()=>{
     updateLabel(initial);
   }
 }); 
+
+const copyYamlBtn = document.getElementById('copyYamlBtn');
+
+copyYamlBtn.addEventListener('click', async () => {
+  try {
+    const data = collect();
+    const yaml = generateFullYAML(data);
+    
+    await navigator.clipboard.writeText(yaml);
+    
+    const originalHTML = copyYamlBtn.innerHTML;
+    copyYamlBtn.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20,6 9,17 4,12"></polyline>
+      </svg>
+    `;
+    copyYamlBtn.style.color = 'var(--accent-500)';
+    
+    setTimeout(() => {
+      copyYamlBtn.innerHTML = originalHTML;
+      copyYamlBtn.style.color = '';
+    }, 1000);
+    
+  } catch (err) {
+    console.error('copy failed:', err);
+    const textArea = document.createElement('textarea');
+    const data = collect();
+    const yaml = generateFullYAML(data);
+    textArea.value = yaml;
+    document.body.appendChild(textArea);
+    textArea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textArea);
+    
+    const originalHTML = copyYamlBtn.innerHTML;
+    copyYamlBtn.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="20,6 9,17 4,12"></polyline>
+      </svg>
+    `;
+    copyYamlBtn.style.color = 'var(--accent-500)';
+    
+    setTimeout(() => {
+      copyYamlBtn.innerHTML = originalHTML;
+      copyYamlBtn.style.color = '';
+    }, 1000);
+  }
+}); 

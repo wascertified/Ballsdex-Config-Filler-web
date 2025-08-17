@@ -341,7 +341,7 @@ function clearYamlHighlight() {
 function render(){
   const data = collect();
   const yaml = generateFullYAML(data);
-  out.innerHTML = yaml.split('\n').map((line,i)=>`<span data-line='${i+1}'>${line.replace(/ /g,'&nbsp;')}</span>`).join('\n');
+  out.innerHTML = yaml.split('\n').map((line,i)=>`<span data-line='${i+1}'>${line}</span>`).join('\n');
   localStorage.setItem(STORE_KEY, JSON.stringify(data));
   const gh = (data.githubLink||'').trim();
   ghBtn.href = gh || '#';
@@ -400,7 +400,9 @@ function restore(){
 form.addEventListener('input', render);
 
 function download(){
-  const blob = new Blob([out.textContent], {type:'text/yaml'});
+  const data = collect();
+  const yaml = generateFullYAML(data);
+  const blob = new Blob([yaml], {type:'text/yaml;charset=utf-8'});
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url; a.download = 'config.yml';

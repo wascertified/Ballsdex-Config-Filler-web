@@ -152,6 +152,23 @@ input:focus, textarea:focus{ border-color: color-mix(in oklab, var(--accent-500)
   transition: background 0.2s;
   color: #fff;
 } 
+
+#yamlOut {
+  white-space: pre;
+  font-family: var(--mono);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: var(--space-6);
+  overflow-x: auto;
+  background: color-mix(in oklab, var(--surface) 95%, transparent);
+  border-radius: 12px;
+  margin: 0;
+}
+
+#yamlOut span {
+  display: inline-block;
+  white-space: pre;
+} 
 [data-theme="light"] .preview pre {
   background: #f5f7fa;
   color: #23272f;

@@ -231,11 +231,17 @@
                 <div class="help" data-i18n="form.fields.multi_line_help">You can enter multiple messages, one per line.</div>
               </div>
             </div>
-            <div style="display:flex;justify-content:flex-end;margin-top:1.5rem;">
-              <button class="btn primary" id="downloadBtn" type="button" data-i18n="form.fields.download_config">Download config.yml</button>
-            </div>
           </div>
         </form>
+
+        <div class="callout" aria-live="polite">
+          <div class="callout-title" data-i18n="callout.title"></div>
+          <p data-i18n-html="callout.before_html"></p>
+          <p data-i18n-html="callout.after_html"></p>
+        </div>
+        <div class="actions actions-bottom">
+          <button class="btn primary" id="downloadBtn" type="button" data-i18n="form.fields.download_config">Download config.yml</button>
+        </div>
       </article>
 
       <aside class="panel preview" aria-label="config.yml preview">

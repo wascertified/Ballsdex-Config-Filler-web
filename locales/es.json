@@ -88,5 +88,10 @@
   "footer": {
     "notice": "El archivo generado",
     "notice_tail": "puede estar desactualizado. Compáralo manualmente con el archivo generado por el programa para asegurar la exactitud."
+  },
+  "callout": {
+    "title": "Antes de descargar este archivo, completa estos pasos:",
+    "before_html": "Sigue la <a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">guía oficial</a> para hacer <code>git clone</code> o descargar la carpeta. Si usas Docker, ejecuta <code>docker compose build</code> y asegúrate de que aparezca un <span class=\"kbd\">config.yml</span> en el directorio del proyecto.",
+    "after_html": "Cuando estés listo, haz clic en el botón de descarga de abajo y compara ambos <span class=\"kbd\">config.yml</span> por diferencias de formato. Si no hay, reemplaza el archivo antiguo por el descargado de este sitio y continúa siguiendo las instrucciones de la terminal."
   }
 } 

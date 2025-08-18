@@ -236,3 +236,30 @@ input:focus, textarea:focus{ border-color: color-mix(in oklab, var(--accent-500)
   width: 16px;
   height: 16px;
 } 
+
+.callout{
+  margin: 0 var(--space-8) var(--space-8);
+  padding: var(--space-6);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--surface) 92%, transparent), color-mix(in oklab, var(--surface) 100%, transparent));
+  box-shadow: var(--shadow);
+  color: var(--text);
+}
+.callout-title{
+  font-weight: 700;
+  margin-bottom: .5rem;
+  color: var(--accent-500);
+}
+.callout p{ margin: .5rem 0 0; color: var(--text-weak); }
+
+.hero{ margin-top: var(--space-2); }
+.grid{ margin-top: var(--space-5); }
+.form{ padding-top: var(--space-6); }
+
+.actions-bottom{
+  display:flex;
+  justify-content:flex-end;
+  gap:.5rem;
+  padding: 0 var(--space-8) var(--space-8);
+} 

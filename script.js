@@ -81,6 +81,7 @@ function collect(){
   data.slowMessages = getLines('slowMessages');
   data.additionalPackages = getLines('additionalPackages');
   data.logChannel = document.getElementById('logChannel')?.value?.trim() || '';
+  data.teamMembersAreOwners = (document.getElementById('teamMembersAreOwners')?.value === 'true');
   data.spawnChanceMin = Number(document.getElementById('spawnChanceMin')?.value) || 40;
   data.spawnChanceMax = Number(document.getElementById('spawnChanceMax')?.value) || 55;
   for(const k of Object.keys(data)){
@@ -181,7 +182,7 @@ function generateFullYAML(data) {
   yaml += `# manage bot ownership\n`;
   yaml += `owners:\n`;
   yaml += `  # if enabled and the application is under a team, all team members will be considered as owners\n`;
-  yaml += `  team-members-are-owners: false\n`;
+  yaml += `  team-members-are-owners: ${data.teamMembersAreOwners ? 'true' : 'false'}\n`;
   yaml += `\n`;
   yaml += `  # a list of IDs that must be considered owners in addition to the application/team owner\n`;
   yaml += `  co-owners:\n`;
@@ -430,6 +431,14 @@ function restore(){
       if(Array.isArray(v)) el.value = v.join('\n');
       else el.value = v;
     });
+    const tmaoHidden = document.getElementById('teamMembersAreOwners');
+    const tmaoTrueBtn = document.getElementById('tmaoTrueBtn');
+    const tmaoFalseBtn = document.getElementById('tmaoFalseBtn');
+    if (tmaoHidden && tmaoTrueBtn && tmaoFalseBtn) {
+      const isTrue = String(tmaoHidden.value) === 'true';
+      tmaoTrueBtn.classList.toggle('primary', isTrue);
+      tmaoFalseBtn.classList.toggle('primary', !isTrue);
+    }
   }catch(e){ console.warn('restore failed', e) }
 }
 
@@ -459,6 +468,9 @@ render();
 document.addEventListener('DOMContentLoaded', function() {
   const validateConfigBtn = document.getElementById('validateConfigBtn');
   const shareConfigBtn = document.getElementById('shareConfigBtn');
+  const tmaoHidden = document.getElementById('teamMembersAreOwners');
+  const tmaoTrueBtn = document.getElementById('tmaoTrueBtn');
+  const tmaoFalseBtn = document.getElementById('tmaoFalseBtn');
   
   if (validateConfigBtn) {
     validateConfigBtn.addEventListener('click', function() {
@@ -507,6 +519,18 @@ document.addEventListener('DOMContentLoaded', function() {
         prompt('Share this link:', shareUrl.toString());
       });
     });
+  }
+
+  function syncTeamMembersOwnersUI(){
+    if (!tmaoHidden || !tmaoTrueBtn || !tmaoFalseBtn) return;
+    const isTrue = String(tmaoHidden.value) === 'true';
+    tmaoTrueBtn.classList.toggle('primary', isTrue);
+    tmaoFalseBtn.classList.toggle('primary', !isTrue);
+  }
+  if (tmaoHidden && tmaoTrueBtn && tmaoFalseBtn) {
+    tmaoTrueBtn.addEventListener('click', function(){ tmaoHidden.value = 'true'; syncTeamMembersOwnersUI(); render(); });
+    tmaoFalseBtn.addEventListener('click', function(){ tmaoHidden.value = 'false'; syncTeamMembersOwnersUI(); render(); });
+    syncTeamMembersOwnersUI();
   }
 });
 

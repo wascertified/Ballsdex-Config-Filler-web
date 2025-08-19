@@ -33,7 +33,9 @@
     "open_github": "Ouvrir GitHub"
   },
   "common": {
-    "how": "Comment"
+    "how": "Comment",
+    "true": "Vrai",
+    "false": "Faux"
   },
   "hero": {
     "eyebrow": "Pas d'édition manuelle de config.yml",
@@ -82,7 +84,8 @@
       "client_id": "ID Client de l'Application Discord",
       "client_secret": "Secret Client de l'Application Discord",
       "webhook_url": "URL du Webhook",
-      "admin_panel_url": "URL du Panneau d'Administration",
+      "admin_panel_url": "URL du panneau d'administration",
+      "team_members_are_owners": "Considérer les membres de l’équipe comme propriétaires",
       "available_vars": "Variables disponibles :",
       "spawn_min": "Chance d'Apparition Min (minutes)",
       "spawn_max": "Chance d'Apparition Max (minutes)",

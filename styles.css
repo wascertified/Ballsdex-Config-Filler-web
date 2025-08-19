@@ -309,6 +309,28 @@ input:focus, textarea:focus{ border-color: color-mix(in oklab, var(--accent-500)
   box-shadow: 0 8px 28px color-mix(in oklab, var(--accent-600) 38%, transparent);
 } 
 
+.toggle-group{
+  display:flex;
+  width:100%;
+}
+.toggle-group .btn{
+	flex:1 1 50%;
+	height: 48px;
+	border:1px solid var(--line);
+	background: linear-gradient(180deg, color-mix(in oklab, var(--surface) 92%, transparent), color-mix(in oklab, var(--surface) 100%, transparent));
+	border-radius:0;
+	color: var(--text);
+	font-weight: 600;
+}
+.toggle-group .btn:first-child{ border-top-left-radius:12px; border-bottom-left-radius:12px }
+.toggle-group .btn:last-child{ border-top-right-radius:12px; border-bottom-right-radius:12px; margin-left:-1px }
+.toggle-group .btn.primary{ border-color: color-mix(in oklab, var(--accent-500) 25%, var(--line)); background: linear-gradient(180deg, color-mix(in oklab, var(--accent-500) 18%, var(--surface)), color-mix(in oklab, var(--accent-600) 22%, var(--surface))); color:white }
+
+[data-theme="light"] .toggle-group .btn.primary{
+	color: var(--text);
+	background: linear-gradient(180deg, color-mix(in oklab, var(--accent-500) 12%, var(--surface)), color-mix(in oklab, var(--accent-600) 14%, var(--surface)));
+}
+
 .yaml-highlight {
   background: color-mix(in oklab, var(--accent-500) 18%, var(--surface));
   border-radius: 8px;

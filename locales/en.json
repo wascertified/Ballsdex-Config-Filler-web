@@ -33,7 +33,9 @@
     "open_github": "Open GitHub"
   },
   "common": {
-    "how": "How"
+    "how": "How",
+    "true": "True",
+    "false": "False"
   },
   "hero": {
     "eyebrow": "No config.yml hand‑editing",
@@ -83,6 +85,7 @@
       "client_secret": "Discord Application Client Secret",
       "webhook_url": "Webhook URL",
       "admin_panel_url": "Admin Panel URL",
+      "team_members_are_owners": "Treat team members as owners",
       "available_vars": "Available variables:",
       "spawn_min": "Spawn Chance Min (minutes)",
       "spawn_max": "Spawn Chance Max (minutes)",

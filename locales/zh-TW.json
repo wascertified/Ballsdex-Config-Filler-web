@@ -33,7 +33,9 @@
     "open_github": "開啟 GitHub"
   },
   "common": {
-    "how": "如何取得"
+    "how": "如何取得",
+    "true": "是",
+    "false": "否"
   },
   "hero": {
     "eyebrow": "不用手動編輯 config.yml",
@@ -83,6 +85,7 @@
       "client_secret": "Discord 應用程式 Client Secret",
       "webhook_url": "Webhook 網址",
       "admin_panel_url": "管理面板網址",
+      "team_members_are_owners": "將團隊成員視為擁有者",
       "available_vars": "可用變數：",
       "spawn_min": "最小出現機率（分鐘）",
       "spawn_max": "最大出現機率（分鐘）",

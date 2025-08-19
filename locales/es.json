@@ -33,7 +33,9 @@
     "open_github": "Abrir GitHub"
   },
   "common": {
-    "how": "Cómo obtener"
+    "how": "Cómo obtener",
+    "true": "Verdadero",
+    "false": "Falso"
   },
   "hero": {
     "eyebrow": "Sin editar config.yml a mano",
@@ -83,6 +85,7 @@
       "client_secret": "Client Secret de la aplicación de Discord",
       "webhook_url": "URL del webhook",
       "admin_panel_url": "URL del panel de administración",
+      "team_members_are_owners": "Tratar a los miembros del equipo como propietarios",
       "available_vars": "Variables disponibles:",
       "spawn_min": "Aparición mínima (minutos)",
       "spawn_max": "Aparición máxima (minutos)",

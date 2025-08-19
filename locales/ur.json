@@ -33,7 +33,9 @@
     "open_github": "GitHub کھولیں"
   },
   "common": {
-    "how": "کیسے"
+    "how": "کیسے",
+    "true": "ہاں",
+    "false": "نہیں"
   },
   "hero": {
     "eyebrow": "کوئی config.yml ہاتھ سے ترمیم نہیں",
@@ -82,7 +84,8 @@
       "client_id": "Discord ایپلیکیشن کلائنٹ آئی ڈی",
       "client_secret": "Discord ایپلیکیشن کلائنٹ سیکریٹ",
       "webhook_url": "ویب ہک URL",
-      "admin_panel_url": "ایڈمن پینل URL",
+      "admin_panel_url": "ایڈمن پینل یو آر ایل",
+      "team_members_are_owners": "ٹیم ممبران کو مالک تصور کریں",
       "available_vars": "دستیاب متغیرات:",
       "spawn_min": "اسپان چانس مین (منٹ)",
       "spawn_max": "اسپان چانس میکس (منٹ)",

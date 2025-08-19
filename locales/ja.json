@@ -33,7 +33,9 @@
     "open_github": "GitHubを開く"
   },
   "common": {
-    "how": "方法"
+    "how": "方法",
+    "true": "はい",
+    "false": "いいえ"
   },
   "hero": {
     "eyebrow": "config.ymlの手動編集不要",
@@ -82,8 +84,9 @@
       "client_id": "DiscordアプリケーションクライアントID",
       "client_secret": "Discordアプリケーションクライアントシークレット",
       "webhook_url": "Webhook URL",
-      "admin_panel_url": "管理パネルURL",
-      "available_vars": "利用可能な変数：",
+      "admin_panel_url": "管理パネルのURL",
+      "team_members_are_owners": "チームメンバーをオーナーとして扱う",
+      "available_vars": "利用可能な変数:",
       "spawn_min": "出現確率最小（分）",
       "spawn_max": "出現確率最大（分）",
       "catch_btn_label": "キャッチボタンラベル",

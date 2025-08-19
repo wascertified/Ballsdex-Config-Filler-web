@@ -164,10 +164,18 @@
                 <label for="adminRoleIds"><span data-i18n="form.fields.admin_roles">Admin Role IDs</span> <a data-i18n="common.how" href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
                 <textarea id="adminRoleIds" name="adminRoleIds" rows="3" data-i18n-placeholder="form.fields.roles_placeholder" placeholder="One role ID per line"></textarea>
               </div>
-              <div class="col-12">
+              <div class="col-6">
                 <label for="logChannel"><span data-i18n="form.fields.log_channel">Log Channel ID</span> <a data-i18n="common.how" href="https://www.pythondiscord.com/pages/guides/pydis-guides/contributing/obtaining-discord-ids/" target="_blank" rel="noopener" style="font-weight:normal;font-size:0.95em;">How</a></label>
                 <input type="text" id="logChannel" name="logChannel" data-i18n-placeholder="form.fields.log_channel_placeholder" placeholder="Log channel ID" />
                 <div class="help" data-i18n="form.fields.log_channel_help">Enter the Discord channel ID for moderation logs</div>
+              </div>
+              <div class="col-6">
+                <label for="teamMembersAreOwners"><span data-i18n="form.fields.team_members_are_owners">Team members are owners</span></label>
+                <input type="hidden" id="teamMembersAreOwners" name="teamMembersAreOwners" value="false" />
+                <div class="toggle-group" role="group" aria-label="Team members are owners">
+                  <button class="btn" type="button" id="tmaoTrueBtn" data-i18n="common.true">True</button>
+                  <button class="btn" type="button" id="tmaoFalseBtn" data-i18n="common.false">False</button>
+                </div>
               </div>
             </div>
           </div>

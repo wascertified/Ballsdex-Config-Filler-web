@@ -33,7 +33,9 @@
     "open_github": "فتح GitHub"
   },
   "common": {
-    "how": "كيف"
+    "how": "كيف",
+    "true": "نعم",
+    "false": "لا"
   },
   "hero": {
     "eyebrow": "لا تحرير يدوي لـ config.yml",
@@ -82,7 +84,8 @@
       "client_id": "معرف عميل تطبيق Discord",
       "client_secret": "سر عميل تطبيق Discord",
       "webhook_url": "رابط Webhook",
-      "admin_panel_url": "رابط لوحة الإدارة",
+      "admin_panel_url": "عنوان لوحة الإدارة",
+      "team_members_are_owners": "اعتبار أعضاء الفريق مالكين",
       "available_vars": "المتغيرات المتاحة:",
       "spawn_min": "الحد الأدنى لفرصة الظهور (دقائق)",
       "spawn_max": "الحد الأقصى لفرصة الظهور (دقائق)",

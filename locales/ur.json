@@ -22,7 +22,11 @@
     "allowed_variables": "صرف {user}, {ball}, {collectible}, اور {wrong} کی اجازت ہے",
     "invalid_format": "{field} میں غلط فارمیٹ: صرف چھوٹے حروف، اعداد اور انڈر سکور کی اجازت ہے",
     "no_caps": "{field} میں بڑے حروف کی اجازت نہیں ہے",
-    "no_spaces": "{field} میں خالی جگہوں کی اجازت نہیں ہے"
+    "no_spaces": "{field} میں خالی جگہوں کی اجازت نہیں ہے",
+    "share_security_warning": "⚠️ سیکیورٹی وارننگ",
+    "share_token_warning": "کنفیگریشن شیئر نہیں کر سکتے: Discord Bot Token بھرا ہوا ہے۔ اس میں حساس معلومات ہیں جو شیئر نہیں کی جا سکتیں۔",
+    "share_client_secret_warning": "کنفیگریشن شیئر نہیں کر سکتے: Discord Client Secret بھرا ہوا ہے۔ اس میں حساس معلومات ہیں جو شیئر نہیں کی جا سکتیں۔",
+    "share_success": "🔗 شیئر لنک کلپ بورڈ پر کاپی ہو گیا!"
   },
   "aria": {
     "toggle_theme": "تھیم تبدیل کریں",

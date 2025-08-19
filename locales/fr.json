@@ -22,7 +22,11 @@
     "allowed_variables": "Seules {user}, {ball}, {collectible} et {wrong} sont autorisées",
     "invalid_format": "Format invalide dans {field} : seules les lettres minuscules, chiffres et tirets bas sont autorisés",
     "no_caps": "Aucune lettre majuscule autorisée dans {field}",
-    "no_spaces": "Aucun espace autorisé dans {field}"
+    "no_spaces": "Aucun espace autorisé dans {field}",
+    "share_security_warning": "⚠️ Avertissement de Sécurité",
+    "share_token_warning": "Impossible de partager la configuration : Le Token du Bot Discord est rempli. Cela contient des informations sensibles qui ne doivent pas être partagées.",
+    "share_client_secret_warning": "Impossible de partager la configuration : Le Client Secret Discord est rempli. Cela contient des informations sensibles qui ne doivent pas être partagées.",
+    "share_success": "🔗 Lien de partage copié dans le presse-papiers !"
   },
   "aria": {
     "toggle_theme": "Basculer le thème",

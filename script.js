@@ -478,7 +478,16 @@ document.addEventListener('DOMContentLoaded', function() {
   if (shareConfigBtn) {
     shareConfigBtn.addEventListener('click', function() {
       const data = collect();
-      const yaml = generateFullYAML(data);
+      
+      if (data.discordToken && data.discordToken.trim()) {
+        alert(`${window.i18n?.t('validation.share_security_warning') || '⚠️ Security Warning'}\n\n${window.i18n?.t('validation.share_token_warning') || 'Cannot share configuration: Discord Bot Token is filled. This contains sensitive information that should not be shared.'}`);
+        return;
+      }
+      
+      if (data.clientSecret && data.clientSecret.trim()) {
+        alert(`${window.i18n?.t('validation.share_security_warning') || '⚠️ Security Warning'}\n\n${window.i18n?.t('validation.share_client_secret_warning') || 'Cannot share configuration: Discord Client Secret is filled. This contains sensitive information that should not be shared.'}`);
+        return;
+      }
       
       const shareData = {
         textPrefix: data.textPrefix,
@@ -493,7 +502,7 @@ document.addEventListener('DOMContentLoaded', function() {
       shareUrl.searchParams.set('share', btoa(JSON.stringify(shareData)));
       
       navigator.clipboard.writeText(shareUrl.toString()).then(() => {
-        alert('🔗 Share link copied to clipboard!');
+        alert(window.i18n?.t('validation.share_success') || '🔗 Share link copied to clipboard!');
       }).catch(() => {
         prompt('Share this link:', shareUrl.toString());
       });

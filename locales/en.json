@@ -22,7 +22,11 @@
     "allowed_variables": "Only {user}, {ball}, {collectible}, and {wrong} are allowed",
     "invalid_format": "Invalid format in {field}: only lowercase letters, numbers, and underscores are allowed",
     "no_caps": "No capital letters allowed in {field}",
-    "no_spaces": "No spaces allowed in {field}"
+    "no_spaces": "No spaces allowed in {field}",
+    "share_security_warning": "⚠️ Security Warning",
+    "share_token_warning": "Cannot share configuration: Discord Bot Token is filled. This contains sensitive information that should not be shared.",
+    "share_client_secret_warning": "Cannot share configuration: Discord Client Secret is filled. This contains sensitive information that should not be shared.",
+    "share_success": "🔗 Share link copied to clipboard!"
   },
   "aria": {
     "toggle_theme": "Toggle theme",

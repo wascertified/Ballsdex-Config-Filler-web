@@ -22,7 +22,11 @@
     "allowed_variables": "{user}、{ball}、{collectible}、{wrong}のみ使用可能です",
     "invalid_format": "{field}の形式が無効です：小文字、数字、アンダースコアのみ使用可能です",
     "no_caps": "{field}で大文字は使用できません",
-    "no_spaces": "{field}でスペースは使用できません"
+    "no_spaces": "{field}でスペースは使用できません",
+    "share_security_warning": "⚠️ セキュリティ警告",
+    "share_token_warning": "設定を共有できません：Discord Bot Tokenが入力されています。これは機密情報を含むため共有すべきではありません。",
+    "share_client_secret_warning": "設定を共有できません：Discord Client Secretが入力されています。これは機密情報を含むため共有すべきではありません。",
+    "share_success": "🔗 共有リンクがクリップボードにコピーされました！"
   },
   "aria": {
     "toggle_theme": "テーマを切り替え",

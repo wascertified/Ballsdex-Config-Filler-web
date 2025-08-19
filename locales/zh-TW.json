@@ -22,7 +22,11 @@
     "allowed_variables": "只允許使用 {user}、{ball}、{collectible} 和 {wrong}",
     "invalid_format": "{field} 格式無效：只允許小寫字母、數字和底線",
     "no_caps": "{field} 中不允許使用大寫字母",
-    "no_spaces": "{field} 中不允許使用空格"
+    "no_spaces": "{field} 中不允許使用空格",
+    "share_security_warning": "⚠️ 安全警告",
+    "share_token_warning": "無法分享配置：Discord Bot Token 已填寫。此資訊包含敏感內容，不應分享。",
+    "share_client_secret_warning": "無法分享配置：Discord Client Secret 已填寫。此資訊包含敏感內容，不應分享。",
+    "share_success": "🔗 分享連結已複製到剪貼板！"
   },
   "aria": {
     "toggle_theme": "切換主題",

@@ -117,5 +117,10 @@
     "title": "在下載此檔案之前，你應該做完的程序：",
     "before_html": "請按照 <a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">官方教學</a> 進行 <code>git clone</code> 或下載資料夾；如果你使用 Docker，請先執行 <code>docker compose build</code> 並確認專案目錄內已出現 <span class=\"kbd\">config.yml</span> 檔案。",
     "after_html": "完成後，請點擊下方的下載按鈕，並比對兩個 <span class=\"kbd\">config.yml</span> 是否有格式上的差異；若沒有，請以本網站下載的檔案取代舊檔，並依終端機指示繼續。"
+  },
+  "links": {
+    "title": "你還可以到這些地方逛逛：",
+    "contestedwheel": "ContestedWheel的Some-BD-Tutorials",
+    "ray": "Ray的Packages"
   }
 } 

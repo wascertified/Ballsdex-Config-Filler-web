@@ -114,8 +114,13 @@
     "notice_tail": "は古い可能性があります。正確性を確保するため、プログラム生成ファイルと手動で照合してください。"
   },
   "callout": {
-    "title": "このファイルをダウンロードする前に、次の手順を完了してください:",
-    "before_html": "<a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">公式ガイド</a>に従って<code>git clone</code>するか、フォルダをダウンロードしてください。Docker を使用する場合は、<code>docker compose build</code>を実行し、プロジェクトディレクトリに <span class=\"kbd\">config.yml</span> が生成されていることを確認してください。",
-    "after_html": "準備ができたら下のダウンロードボタンをクリックし、2 つの <span class=\"kbd\">config.yml</span> に書式の違いがないか比較してください。問題がなければ、本サイトでダウンロードしたファイルで古いファイルを置き換え、ターミナルの指示に従って続行してください。"
+    "title": "このファイルをダウンロードする前に、以下の手順を完了してください:",
+    "before_html": "<a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">公式ガイド</a>に従って <code>git clone</code> またはフォルダをダウンロードしてください。Dockerを使用する場合は、<code>docker compose build</code> を実行し、プロジェクトディレクトリに <span class=\"kbd\">config.yml</span> が表示されることを確認してください。",
+    "after_html": "準備ができたら、下のダウンロードボタンをクリックし、両方の <span class=\"kbd\">config.yml</span> をフォーマットの違いについて比較してください。違いがない場合は、古いファイルをこのサイトからダウンロードしたファイルに置き換え、ターミナルの指示に従って続行してください。"
+  },
+  "links": {
+    "title": "これらの場所もチェックできます:",
+    "contestedwheel": "ContestedWheelのSome-BD-Tutorials",
+    "ray": "RayのPackages"
   }
 } 

@@ -117,5 +117,10 @@
     "title": "Before downloading this file, complete these steps:",
     "before_html": "Follow the <a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">official guide</a> to <code>git clone</code> or download the folder. If you use Docker, run <code>docker compose build</code> and make sure a <span class=\"kbd\">config.yml</span> appears in your project directory.",
     "after_html": "When ready, click the download button below and compare both <span class=\"kbd\">config.yml</span> for any formatting differences. If none, replace the old file with the one downloaded from this site and continue following the terminal instructions."
+  },
+  "links": {
+    "title": "You can also check out these places:",
+    "contestedwheel": "ContestedWheel's Some-BD-Tutorials",
+    "ray": "Ray's Packages"
   }
 } 

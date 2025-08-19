@@ -115,7 +115,12 @@
   },
   "callout": {
     "title": "Avant de télécharger ce fichier, complétez ces étapes :",
-    "before_html": "Suivez le <a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">guide officiel</a> pour faire un <code>git clone</code> ou télécharger le dossier. Si vous utilisez Docker, exécutez <code>docker compose build</code> et vérifiez qu’un <span class=\"kbd\">config.yml</span> apparaît dans le répertoire du projet.",
-    "after_html": "Quand vous êtes prêt, cliquez sur le bouton de téléchargement ci‑dessous et comparez les deux <span class=\"kbd\">config.yml</span> pour toute différence de formatage. S’il n’y en a pas, remplacez l’ancien fichier par celui téléchargé ici et continuez à suivre les instructions du terminal."
+    "before_html": "Suivez le <a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">guide officiel</a> pour faire <code>git clone</code> ou télécharger le dossier. Si vous utilisez Docker, exécutez <code>docker compose build</code> et assurez-vous qu'un <span class=\"kbd\">config.yml</span> apparaît dans le répertoire du projet.",
+    "after_html": "Quand vous êtes prêt, cliquez sur le bouton de téléchargement ci-dessous et comparez les deux <span class=\"kbd\">config.yml</span> pour les différences de format. S'il n'y en a pas, remplacez l'ancien fichier par celui téléchargé de ce site et continuez en suivant les instructions du terminal."
+  },
+  "links": {
+    "title": "Vous pouvez aussi visiter ces endroits :",
+    "contestedwheel": "Some-BD-Tutorials de ContestedWheel",
+    "ray": "Paquets de Ray"
   }
 } 

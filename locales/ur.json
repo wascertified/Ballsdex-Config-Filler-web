@@ -114,8 +114,13 @@
     "notice_tail": "پرانی ہو سکتی ہے۔ براہ کرم درستگی کو یقینی بنانے کے لیے اسے پروگرام سے تیار کردہ فائل کے ساتھ دستی طور پر کراس چیک کریں۔"
   },
   "callout": {
-    "title": "اس فائل کو ڈاؤن لوڈ کرنے سے پہلے یہ مراحل مکمل کریں:",
-    "before_html": "<a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">سرکاری رہنما</a> کے مطابق <code>git clone</code> کریں یا فولڈر ڈاؤن لوڈ کریں۔ اگر آپ Docker استعمال کرتے ہیں تو <code>docker compose build</code> چلائیں اور یقینی بنائیں کہ پروجیکٹ ڈائریکٹری میں <span class=\"kbd\">config.yml</span> موجود ہے۔",
-    "after_html": "تیار ہونے پر نیچے والے ڈاؤن لوڈ بٹن پر کلک کریں اور دونوں <span class=\"kbd\">config.yml</span> میں فارمیٹنگ کے فرق چیک کریں۔ اگر کوئی فرق نہ ہو تو اس سائٹ سے ڈاؤن لوڈ کی گئی فائل سے پرانی فائل کو بدل دیں اور ٹرمینل ہدایات پر عمل جاری رکھیں۔"
+    "title": "اس فائل کو ڈاؤن لوڈ کرنے سے پہلے، یہ مراحل مکمل کریں:",
+    "before_html": "<a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">سرکاری گائیڈ</a> کی پیروی کریں <code>git clone</code> کرنے یا فولڈر ڈاؤن لوڈ کرنے کے لیے۔ اگر آپ Docker استعمال کرتے ہیں، تو <code>docker compose build</code> چلائیں اور یقینی بنائیں کہ آپ کے پروجیکٹ ڈائریکٹری میں <span class=\"kbd\">config.yml</span> نظر آئے۔",
+    "after_html": "جب تیار ہوں، نیچے دیے گئے ڈاؤن لوڈ بٹن پر کلک کریں اور دونوں <span class=\"kbd\">config.yml</span> کا موازنہ کریں کسی بھی فارمیٹنگ فرق کے لیے۔ اگر کوئی نہیں ہے، تو پرانی فائل کو اس سائٹ سے ڈاؤن لوڈ کی گئی فائل سے تبدیل کر دیں اور ٹرمینل ہدایات کی پیروی جاری رکھیں۔"
+  },
+  "links": {
+    "title": "آپ ان جگہوں پر بھی جا سکتے ہیں:",
+    "contestedwheel": "ContestedWheel کے Some-BD-Tutorials",
+    "ray": "Ray کے Packages"
   }
 } 

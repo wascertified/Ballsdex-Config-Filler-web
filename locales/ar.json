@@ -114,8 +114,13 @@
     "notice_tail": "قد يكون قديماً. يرجى التحقق منه يدوياً مع الملف المُنشأ بواسطة البرنامج لضمان الدقة."
   },
   "callout": {
-    "title": "قبل تنزيل هذا الملف، أكمل الخطوات التالية:",
-    "before_html": "اتبع <a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">الدليل الرسمي</a> لتنفيذ <code>git clone</code> أو تنزيل المجلد. إذا كنت تستخدم Docker، شغّل <code>docker compose build</code> وتأكد من ظهور <span class=\"kbd\">config.yml</span> في مجلد المشروع.",
-    "after_html": "عند الجاهزية، انقر زر التنزيل أدناه وقارن ملفي <span class=\"kbd\">config.yml</span> لأي اختلافات في التنسيق. إن لم توجد، استبدل الملف القديم بالملف الذي تم تنزيله من هذا الموقع وواصل اتباع تعليمات الطرفية."
+    "title": "قبل تحميل هذا الملف، أكمل هذه الخطوات:",
+    "before_html": "اتبع <a href=\"https://github.com/Ballsdex-Team/BallsDex-DiscordBot/wiki\" target=\"_blank\" rel=\"noopener\">الدليل الرسمي</a> لعمل <code>git clone</code> أو تحميل المجلد. إذا كنت تستخدم Docker، قم بتشغيل <code>docker compose build</code> وتأكد من ظهور <span class=\"kbd\">config.yml</span> في مجلد المشروع.",
+    "after_html": "عندما تكون جاهزاً، انقر على زر التحميل أدناه وقارن بين ملفي <span class=\"kbd\">config.yml</span> للبحث عن أي اختلافات في التنسيق. إذا لم تكن هناك، استبدل الملف القديم بالذي تم تحميله من هذا الموقع واستمر في اتباع تعليمات الطرفية."
+  },
+  "links": {
+    "title": "يمكنك أيضاً زيارة هذه الأماكن:",
+    "contestedwheel": "Some-BD-Tutorials من ContestedWheel",
+    "ray": "حزم Ray"
   }
 } 

@@ -29,6 +29,7 @@
       "game": "کھیل",
       "admin": "انتظامیہ",
       "admin_panel": "انتظامیہ پینل",
+      "packages": "پیکجز",
       "game_messages": "کھیل کے پیغامات"
     },
     "fields": {
@@ -71,6 +72,9 @@
       "spawn_msg": "اسپان پیغام",
       "slow_msg": "بہت سست پیغام",
       "multi_line_help": "آپ متعدد پیغامات درج کر سکتے ہیں، ایک فی لائن۔",
+      "additional_packages": "اضافی پیکجز (فولڈر کے نام)",
+      "additional_packages_placeholder": "اضافی پیکج کے نام درج کریں (ایک فی لائن)\nمثال:\nbroadcast\nreport",
+      "packages_help": "\"ballsdex.packages.\" پریفکس کے بغیر اضافی پیکج کے نام درج کریں۔ ڈیفالٹ پیکجز ہمیشہ شامل رہیں گے۔",
       "download_config": "config.yml ڈاؤن لوڈ کریں",
       "optional": "اختیاری",
       "lines_to_items": "ہر لائن ایک آئٹم بن جاتی ہے"

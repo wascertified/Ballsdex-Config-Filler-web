@@ -29,6 +29,7 @@
       "game": "Juego",
       "admin": "Administración",
       "admin_panel": "Panel de administración",
+      "packages": "Paquetes",
       "game_messages": "Mensajes del juego"
     },
     "fields": {
@@ -71,6 +72,9 @@
       "spawn_msg": "Mensaje de aparición",
       "slow_msg": "Mensaje de demasiado lento",
       "multi_line_help": "Puedes introducir varios mensajes, uno por línea.",
+      "additional_packages": "Paquetes adicionales (nombres de carpetas)",
+      "additional_packages_placeholder": "Introduce nombres de paquetes adicionales (uno por línea)\nEjemplo:\nbroadcast\nreport",
+      "packages_help": "Introduce nombres de paquetes adicionales sin el prefijo \"ballsdex.packages.\". Los paquetes predeterminados siempre se incluirán.",
       "download_config": "Descargar config.yml",
       "optional": "opcional",
       "lines_to_items": "Cada línea se convierte en un elemento"

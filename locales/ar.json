@@ -29,6 +29,7 @@
       "game": "اللعبة",
       "admin": "الإدارة",
       "admin_panel": "لوحة الإدارة",
+      "packages": "الحزم",
       "game_messages": "رسائل اللعبة"
     },
     "fields": {
@@ -71,6 +72,9 @@
       "spawn_msg": "رسالة الظهور",
       "slow_msg": "رسالة البطء",
       "multi_line_help": "يمكنك إدخال عدة رسائل، واحدة في كل سطر.",
+      "additional_packages": "الحزم الإضافية (أسماء المجلدات)",
+      "additional_packages_placeholder": "أدخل أسماء الحزم الإضافية (واحدة في كل سطر)\nمثال:\nbroadcast\nreport",
+      "packages_help": "أدخل أسماء الحزم الإضافية بدون البادئة \"ballsdex.packages.\". ستُضمّن الحزم الافتراضية دائماً.",
       "download_config": "تحميل config.yml",
       "optional": "اختياري",
       "lines_to_items": "كل سطر يصبح عنصراً واحداً"

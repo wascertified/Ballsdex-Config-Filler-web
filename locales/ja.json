@@ -29,6 +29,7 @@
       "game": "ゲーム",
       "admin": "管理",
       "admin_panel": "管理パネル",
+      "packages": "パッケージ",
       "game_messages": "ゲームメッセージ"
     },
     "fields": {
@@ -71,6 +72,9 @@
       "spawn_msg": "出現メッセージ",
       "slow_msg": "遅すぎるメッセージ",
       "multi_line_help": "複数のメッセージを入力できます。1行に1つ。",
+      "additional_packages": "追加パッケージ（フォルダ名）",
+      "additional_packages_placeholder": "追加パッケージ名を入力してください（1行に1つ）\n例：\nbroadcast\nreport",
+      "packages_help": "\"ballsdex.packages.\"プレフィックスなしで追加パッケージ名を入力してください。デフォルトパッケージは常に含まれます。",
       "download_config": "config.ymlをダウンロード",
       "optional": "オプション",
       "lines_to_items": "各行が1つのアイテムになります"

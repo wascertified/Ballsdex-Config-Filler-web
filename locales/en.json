@@ -29,6 +29,7 @@
       "game": "Game",
       "admin": "Admin",
       "admin_panel": "Admin Panel",
+      "packages": "Packages",
       "game_messages": "Game Messages"
     },
     "fields": {
@@ -71,6 +72,9 @@
       "spawn_msg": "Spawn Message",
       "slow_msg": "Too Slow Message",
       "multi_line_help": "You can enter multiple messages, one per line.",
+      "additional_packages": "Additional Packages (folder names)",
+      "additional_packages_placeholder": "Enter additional package names (one per line)\nExample:\nbroadcast\nreport",
+      "packages_help": "Enter additional package names without the \"ballsdex.packages.\" prefix. The default packages will always be included.",
       "download_config": "Download config.yml",
       "optional": "optional",
       "lines_to_items": "Each line becomes one item"

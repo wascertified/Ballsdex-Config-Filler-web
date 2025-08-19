@@ -79,6 +79,7 @@ function collect(){
   data.wrongMessages = getLines('wrongMessages');
   data.spawnMessages = getLines('spawnMessages');
   data.slowMessages = getLines('slowMessages');
+  data.additionalPackages = getLines('additionalPackages');
   data.logChannel = document.getElementById('logChannel')?.value?.trim() || '';
   data.spawnChanceMin = Number(document.getElementById('spawnChanceMin')?.value) || 40;
   data.spawnChanceMax = Number(document.getElementById('spawnChanceMax')?.value) || 55;
@@ -210,7 +211,18 @@ function generateFullYAML(data) {
   yaml += `  - ballsdex.packages.countryballs\n`;
   yaml += `  - ballsdex.packages.info\n`;
   yaml += `  - ballsdex.packages.players\n`;
-  yaml += `  - ballsdex.packages.trade\n\n`;
+  yaml += `  - ballsdex.packages.trade\n`;
+  
+  // Add additional packages if provided
+  if (data.additionalPackages && data.additionalPackages.length > 0) {
+    data.additionalPackages.forEach(pkg => {
+      if (pkg.trim()) {
+        yaml += `  - ballsdex.packages.${pkg.trim()}\n`;
+      }
+    });
+  }
+  
+  yaml += `\n`;
   
   yaml += `# prometheus metrics collection, leave disabled if you don't know what this is\n`;
   yaml += `prometheus:\n`;
@@ -314,6 +326,7 @@ const fieldToYamlLine = {
   clientSecret: 92,
   webhookUrl: 95,
   adminPanelUrl: 99,
+  additionalPackages: 102,
   catchButtonLabel: 137,
   caughtMessages: 140,
   wrongMessages: 146,

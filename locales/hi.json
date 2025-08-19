@@ -29,6 +29,7 @@
       "game": "खेल",
       "admin": "प्रशासन",
       "admin_panel": "प्रशासन पैनल",
+      "packages": "पैकेज",
       "game_messages": "खेल संदेश"
     },
     "fields": {
@@ -71,6 +72,9 @@
       "spawn_msg": "स्पॉन संदेश",
       "slow_msg": "बहुत धीमा संदेश",
       "multi_line_help": "आप कई संदेश दर्ज कर सकते हैं, एक प्रति पंक्ति।",
+      "additional_packages": "अतिरिक्त पैकेज (फ़ोल्डर नाम)",
+      "additional_packages_placeholder": "अतिरिक्त पैकेज नाम दर्ज करें (एक प्रति पंक्ति)\nउदाहरण:\nbroadcast\nreport",
+      "packages_help": "\"ballsdex.packages.\" प्रीफिक्स के बिना अतिरिक्त पैकेज नाम दर्ज करें। डिफ़ॉल्ट पैकेज हमेशा शामिल रहेंगे।",
       "download_config": "config.yml डाउनलोड करें",
       "optional": "वैकल्पिक",
       "lines_to_items": "प्रत्येक पंक्ति एक आइटम बन जाती है"

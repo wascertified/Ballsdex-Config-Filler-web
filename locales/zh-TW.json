@@ -29,6 +29,7 @@
       "game": "遊戲",
       "admin": "管理",
       "admin_panel": "管理面板",
+      "packages": "套件",
       "game_messages": "遊戲訊息"
     },
     "fields": {
@@ -71,6 +72,9 @@
       "spawn_msg": "出現訊息",
       "slow_msg": "太慢了訊息",
       "multi_line_help": "可輸入多行訊息，每行一則。",
+      "additional_packages": "額外套件（資料夾名稱）",
+      "additional_packages_placeholder": "輸入額外套件名稱（每行一個）\n範例：\nbroadcast\nreport",
+      "packages_help": "輸入額外套件名稱，無需包含 \"ballsdex.packages.\" 前綴。預設套件將始終包含。",
       "download_config": "下載 config.yml",
       "optional": "可不填",
       "lines_to_items": "每行會自動轉成一個項目"

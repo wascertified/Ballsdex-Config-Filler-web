@@ -42,6 +42,14 @@
     "title": "Générez une configuration parfaite pour votre bot Ballsdex",
     "subtitle_html": "Exportez votre <span class=\"kbd\">config.yml</span>. Si vous avez des questions, demandez dans le <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">serveur de développement</a>."
   },
+  "upload": {
+    "title": "Vous avez déjà une config ? Importez-la ici pour pré-remplir le formulaire ci-dessous.",
+    "or": "ou",
+    "browse": "Choisir config.yml",
+    "invalid_yaml": "Le fichier téléversé n'est pas un YAML valide.",
+    "schema_error": "La configuration téléversée contient des champs inconnus ou un format invalide. Veuillez remplir le formulaire ci-dessous manuellement.",
+    "accepted": "Configuration chargée avec succès."
+  },
   "form": {
     "reset": "Réinitialiser",
     "autosave": "Sauvegarde automatique • Activée",

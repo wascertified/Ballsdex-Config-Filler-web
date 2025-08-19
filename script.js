@@ -44,7 +44,7 @@ function isNumericField(name){
 }
 
 function quote(str){
-  if(str === null || str === undefined) return '""';
+  if(str === null || str === undefined) return "\"\"";
   return '"' + String(str).replace(/\\/g,'\\\\').replace(/"/g,'\\"') + '"';
 }
 
@@ -532,25 +532,193 @@ document.addEventListener('DOMContentLoaded', function() {
     tmaoFalseBtn.addEventListener('click', function(){ tmaoHidden.value = 'false'; syncTeamMembersOwnersUI(); render(); });
     syncTeamMembersOwnersUI();
   }
+
+  const uploadBar = document.getElementById('uploadBar');
+  const uploadInput = document.getElementById('uploadInput');
+  const uploadBtn = document.getElementById('uploadBtn');
+
+  function readFileAsText(file){
+    return new Promise((resolve,reject)=>{
+      const reader = new FileReader();
+      reader.onload = () => resolve(String(reader.result||''));
+      reader.onerror = reject;
+      reader.readAsText(file);
+    });
+  }
+
+  function mapYamlToFormData(y){
+    const mapped = {};
+    mapped.discordToken = y['discord-token'] || '';
+    mapped.textPrefix = y['text-prefix'] || '';
+    const about = y['about'] || {};
+    mapped.description = about['description'] ? String(about['description']).trim() : '';
+    mapped.githubLink = about['github-link'] || '';
+    mapped.discordInvite = about['discord-invite'] || '';
+    mapped.termsOfService = about['terms-of-service'] || '';
+    mapped.privacyPolicy = about['privacy-policy'] || '';
+
+    mapped.collectibleName = y['collectible-name'] || '';
+    mapped.pluralCollectibleName = y['plural-collectible-name'] || '';
+    mapped.botName = y['bot-name'] || '';
+    mapped.playersGroupCogName = y['players-group-cog-name'] || '';
+    mapped.favoritedCollectibleEmoji = y['favorited-collectible-emoji'] || '';
+    mapped.maxFavorites = y['max-favorites'] || '';
+    mapped.maxAttackBonus = y['max-attack-bonus'] || '';
+    mapped.maxHealthBonus = y['max-health-bonus'] || '';
+
+    const admin = y['admin-command'] || {};
+    mapped.guildIds = (admin['guild-ids'] || []).map(String);
+    mapped.rootRoleIds = (admin['root-role-ids'] || []).map(String);
+    mapped.adminRoleIds = (admin['admin-role-ids'] || []).map(String);
+
+    mapped.logChannel = y['log-channel'] || '';
+
+    const owners = y['owners'] || {};
+    mapped.teamMembersAreOwners = owners['team-members-are-owners'] === true;
+
+    const adminPanel = y['admin-panel'] || {};
+    mapped.clientId = adminPanel['client-id'] || '';
+    mapped.clientSecret = adminPanel['client-secret'] || '';
+    mapped.webhookUrl = adminPanel['webhook-url'] || '';
+    mapped.adminPanelUrl = adminPanel['url'] || '';
+
+    const spawnRange = y['spawn-chance-range'];
+    if (Array.isArray(spawnRange) && spawnRange.length === 2) {
+      mapped.spawnChanceMin = Number(spawnRange[0]);
+      mapped.spawnChanceMax = Number(spawnRange[1]);
+    }
+
+    const catchCfg = y['catch'] || {};
+    mapped.catchButtonLabel = catchCfg['catch_button_label'] || '';
+    mapped.caughtMessages = catchCfg['caught_msgs'] || [];
+    mapped.wrongMessages = catchCfg['wrong_msgs'] || [];
+    mapped.spawnMessages = catchCfg['spawn_msgs'] || [];
+    mapped.slowMessages = catchCfg['slow_msgs'] || [];
+
+    return mapped;
+  }
+
+  function applyToForm(mapped){
+    const entries = Object.entries(mapped);
+    for(const [k,v] of entries){
+      const el = document.getElementById(k);
+      if(!el) continue;
+      if(Array.isArray(v)) el.value = v.join('\n');
+      else if(typeof v === 'boolean') el.value = v ? 'true' : 'false';
+      else el.value = String(v ?? '');
+    }
+  }
+
+  function hasUnknownFields(input){
+    const topKnown = new Set(['discord-token','text-prefix','about','collectible-name','plural-collectible-name','bot-name','players-group-cog-name','favorited-collectible-emoji','max-favorites','max-attack-bonus','max-health-bonus','admin-command','log-channel','owners','admin-panel','packages','prometheus','spawn-chance-range','spawn-manager','sentry','catch']);
+
+    const aboutKnown = new Set(['description','github-link','discord-invite','terms-of-service','privacy-policy']);
+    const adminKnown = new Set(['guild-ids','root-role-ids','admin-role-ids']);
+    const ownersKnown = new Set(['team-members-are-owners','co-owners']);
+    const panelKnown = new Set(['client-id','client-secret','webhook-url','url']);
+    const prometheusKnown = new Set(['enabled','host','port']);
+    const sentryKnown = new Set(['dsn','environment']);
+    const catchKnown = new Set(['catch_button_label','caught_msgs','wrong_msgs','spawn_msgs','slow_msgs']);
+
+    function unknownKeys(obj, levelKey){
+      if(!obj || typeof obj !== 'object') return [];
+      const keys = Object.keys(obj);
+      let allow;
+      switch(levelKey){
+        case 'about': allow = aboutKnown; break;
+        case 'admin-command': allow = adminKnown; break;
+        case 'owners': allow = ownersKnown; break;
+        case 'admin-panel': allow = panelKnown; break;
+        case 'prometheus': allow = prometheusKnown; break;
+        case 'sentry': allow = sentryKnown; break;
+        case 'catch': allow = catchKnown; break;
+        default: allow = topKnown; break;
+      }
+      const unk = keys.filter(k=> !allow.has(k));
+      let nested = [];
+      for(const k of keys){
+        if(['about','admin-command','owners','admin-panel','prometheus','sentry','catch'].includes(k)){
+          nested = nested.concat(unknownKeys(obj[k], k));
+        }
+      }
+      return unk.concat(nested);
+    }
+
+    const unknown = unknownKeys(input, null);
+    return unknown.length>0 ? unknown : null;
+  }
+
+  async function handleFiles(files){
+    if(!files || !files.length) return;
+    try{
+      const txt = await readFileAsText(files[0]);
+      let y;
+      try {
+        y = jsyaml.load(txt);
+      } catch(e){
+        alert(window.i18n?.t('upload.invalid_yaml') || 'The uploaded file is not a valid YAML.');
+        return;
+      }
+      if(!y || typeof y !== 'object'){
+        alert(window.i18n?.t('upload.invalid_yaml') || 'The uploaded file is not a valid YAML.');
+        return;
+      }
+
+      const unknown = hasUnknownFields(y);
+      if(unknown){
+        alert((window.i18n?.t('upload.schema_error') || 'The uploaded config contains unknown fields or invalid format.')+`\nUnknown: ${unknown.join(', ')}`);
+        return;
+      }
+
+      const mapped = mapYamlToFormData(y);
+      const validation = validateConfiguration({
+        ...collect(),
+        ...mapped
+      }, { strictRequired: false });
+      if(!validation.isValid){
+        alert(`${window.i18n?.t('validation.error_prefix') || '❌ Configuration validation failed:'} ${validation.errorMessage}`);
+        return;
+      }
+
+      applyToForm(mapped);
+      localStorage.setItem(STORE_KEY, JSON.stringify(collect()));
+      render();
+      alert(window.i18n?.t('upload.accepted') || 'Config loaded successfully.');
+    }catch(err){
+      console.error(err);
+      alert(window.i18n?.t('upload.invalid_yaml') || 'The uploaded file is not a valid YAML.');
+    }
+  }
+
+  if(uploadBtn){ uploadBtn.addEventListener('click', ()=> uploadInput?.click()); }
+  if(uploadInput){
+    uploadInput.addEventListener('change', (e)=> handleFiles(e.target.files));
+  }
+  if(uploadBar){
+    uploadBar.addEventListener('dragover', (e)=>{ e.preventDefault(); uploadBar.classList.add('dragover'); });
+    uploadBar.addEventListener('dragleave', ()=> uploadBar.classList.remove('dragover'));
+    uploadBar.addEventListener('drop', (e)=>{ e.preventDefault(); uploadBar.classList.remove('dragover'); const files = e.dataTransfer?.files; handleFiles(files); });
+  }
 });
 
-function validateConfiguration(data) {
+function validateConfiguration(data, options){
   const allowedVariables = ['{user}', '{ball}', '{collectible}', '{wrong}'];
+  const opts = Object.assign({ strictRequired: true }, options || {});
   const result = { isValid: true, errorMessage: '' };
   
-  if (!data.discordToken) {
+  if (opts.strictRequired && !data.discordToken) {
     result.isValid = false;
     result.errorMessage = window.i18n?.t('validation.missing_token') || 'Discord Bot Token is required';
     return result;
   }
   
-  if (!data.textPrefix) {
+  if (opts.strictRequired && !data.textPrefix) {
     result.isValid = false;
     result.errorMessage = window.i18n?.t('validation.missing_prefix') || 'Text Command Prefix is required';
     return result;
   }
   
-  if (!data.description) {
+  if (opts.strictRequired && !data.description) {
     result.isValid = false;
     result.errorMessage = window.i18n?.t('validation.missing_description') || 'Description is required';
     return result;

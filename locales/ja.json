@@ -42,6 +42,14 @@
     "title": "Ballsdexボット用の完璧な設定を生成",
     "subtitle_html": "<span class=\"kbd\">config.yml</span>をエクスポート。ご質問がある場合は<a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">開発サーバー</a>でお聞きください。"
   },
+  "upload": {
+    "title": "すでに設定がありますか？ ここでインポートすると下のフォームが自動入力されます。",
+    "or": "または",
+    "browse": "config.yml を選択",
+    "invalid_yaml": "アップロードされたファイルは有効な YAML ではありません。",
+    "schema_error": "アップロードした設定に不明なフィールドまたは無効な形式があります。下のフォームに手動で入力してください。",
+    "accepted": "設定を読み込みました。"
+  },
   "form": {
     "reset": "リセット",
     "autosave": "自動保存 • オン",

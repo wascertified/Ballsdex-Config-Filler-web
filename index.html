@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/x-icon" href="icon/favicon.ico">
   <script src="https://cdn.jsdelivr.net/npm/ajv@8/dist/ajv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 </head>
 <body>
   <div class="wrap">
@@ -56,6 +57,20 @@
       <h2 class="title" id="h-title" data-i18n="hero.title">Generate a perfect config for your Ballsdex bot</h2>
       <p class="subtitle" data-i18n-html="hero.subtitle_html">Export your <span class="kbd">config.yml</span>. If you have any questions, ask in <a href="https://discord.gg/pcqyRNjvua" target="_blank" rel="noopener">dev server</a>.</p>
     </section>
+
+    <div class="upload-bar" id="uploadBar" aria-label="Upload config">
+      <input type="file" id="uploadInput" accept=".yml,.yaml,text/yaml" hidden />
+      <div class="upload-inner">
+        <div class="upload-icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        </div>
+        <div class="upload-text">
+          <div class="upload-title" data-i18n="upload.title">Drop your config.yml here</div>
+          <div class="upload-or" data-i18n="upload.or">or</div>
+        </div>
+        <button class="btn" id="uploadBtn" type="button" data-i18n="upload.browse">Choose file</button>
+      </div>
+    </div>
 
     <div class="grid" style="container-type:inline-size">
       <article class="panel" aria-label="Form">

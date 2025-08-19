@@ -42,6 +42,14 @@
     "title": "為你的 Ballsdex 機器人產生完美設定",
     "subtitle_html": "匯出你的 <span class=\"kbd\">config.yml</span>。有問題可至 <a href=\"https://discord.gg/pcqyRNjvua\" target=\"_blank\" rel=\"noopener\">開發伺服器</a> 詢問。"
   },
+  "upload": {
+    "title": "如果你之前已經填過，這裡可以匯入現有 config.yml 來自動帶入欄位",
+    "or": "或",
+    "browse": "選擇 config.yml",
+    "invalid_yaml": "上傳的檔案不是有效的 YAML。",
+    "schema_error": "配置包含未知欄位或格式不正確，已拒絕載入。請改在下方表單填寫。",
+    "accepted": "已載入並同步配置。"
+  },
   "form": {
     "reset": "重設",
     "autosave": "自動儲存 • 開啟",

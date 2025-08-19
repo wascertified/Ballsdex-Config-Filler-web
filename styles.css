@@ -448,4 +448,27 @@ input:focus, textarea:focus{ border-color: color-mix(in oklab, var(--accent-500)
   gap:.5rem;
   padding: 0 var(--space-8) var(--space-8);
   margin-top: var(--space-4);
-} 
+}
+
+.upload-bar{
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-2);
+  border:1.5px dashed var(--line);
+  border-radius: 12px;
+  background: color-mix(in oklab, var(--surface) 98%, transparent);
+  text-align: center;
+  overflow-x: auto;
+}
+.upload-inner{ display:flex; align-items:center; justify-content:center; gap:.75rem; padding:.75rem 1rem; flex-wrap: nowrap; white-space: nowrap; }
+.upload-icon{ opacity:.8; }
+.upload-text{ display:flex; align-items:center; gap:.5rem; white-space: nowrap; }
+.upload-title{ font-weight:600; color: var(--text); white-space: nowrap; }
+.upload-or{ color:var(--muted); font-size:.9em; white-space: nowrap; }
+.upload-bar.dragover{ outline:2px solid var(--ring); outline-offset:2px; }
+.upload-bar:hover{ border-color: color-mix(in oklab, var(--accent-500) 45%, var(--line)); }
+
+.upload-bar .btn{ color: var(--text); white-space: nowrap; }
+[data-theme="dark"] .upload-bar .btn{ color:#fff; }
+[data-theme="light"] .upload-bar .btn{ color:#000; }
+.upload-bar .btn:hover{ background: color-mix(in oklab, var(--accent-500) 12%, var(--surface)); border-color: color-mix(in oklab, var(--accent-500) 35%, var(--line)); box-shadow: 0 4px 14px color-mix(in oklab, var(--accent-500) 18%, transparent); transform: translateY(-1px); }
+.upload-bar .btn:focus-visible{ outline:none; box-shadow: 0 0 0 5px var(--ring); border-color: color-mix(in oklab, var(--accent-500) 40%, var(--line)); } 

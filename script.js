@@ -90,7 +90,7 @@ function collect(){
 }
 
 function generateFullYAML(data) {
-  let yaml = `# config.yml-language-server: $schema=json-config-ref.json\n\n`;
+  let yaml = `# yaml-language-server: $schema=json-config-ref.json\n\n`;
   
   yaml += `# paste the bot token after regenerating it here\n`;
   yaml += `discord-token: ${data.discordToken || ''}\n\n`;

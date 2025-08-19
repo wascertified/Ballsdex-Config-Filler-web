@@ -1,12 +1,28 @@
 {
   "app": {
-    "title": "BallsDex設定ジェネレーター",
-    "subtitle": "完全に静的。<a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>による。",
+    "title": "BallsDex 設定ジェネレーター",
+    "subtitle": "純粋な静的サイト。<a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a> 制作。",
     "privacy": "プライバシー：ローカルのみ",
-    "use_desktop_title": "このページを表示するにはコンピューターをご使用ください",
+    "use_desktop_title": "このページを表示するにはコンピューターを使用してください",
     "use_desktop_desc": "このツールはデスクトップブラウザとのみ互換性があり、モバイルデバイスでは正しく表示されない場合があります。",
-    "tip_download": "ヒント：Ctrl + Sでダウンロード。",
+    "tip_download": "ヒント：Ctrl + S を押してダウンロード。",
     "live_preview": "ライブプレビュー"
+  },
+  "validation": {
+    "validate": "設定確認",
+    "share": "共有",
+    "success": "✅ 設定が有効です！",
+    "error_prefix": "❌ 設定の検証に失敗しました：",
+    "missing_token": "Discord Bot Tokenが必要です",
+    "missing_prefix": "テキストコマンドプレフィックスが必要です",
+    "missing_description": "説明が必要です",
+    "invalid_variables": "ゲームメッセージに無効な変数が見つかりました",
+    "user_in_spawn": "スポーンメッセージで{user}変数は使用できません",
+    "unknown_variable": "不明な変数が見つかりました：{variable}",
+    "allowed_variables": "{user}、{ball}、{collectible}、{wrong}のみ使用可能です",
+    "invalid_format": "{field}の形式が無効です：小文字、数字、アンダースコアのみ使用可能です",
+    "no_caps": "{field}で大文字は使用できません",
+    "no_spaces": "{field}でスペースは使用できません"
   },
   "aria": {
     "toggle_theme": "テーマを切り替え",

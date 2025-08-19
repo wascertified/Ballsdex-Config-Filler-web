@@ -361,6 +361,7 @@ function render(){
   ghBtn.setAttribute('aria-disabled', gh ? 'false' : 'true');
   dlBtn.disabled = false;
 
+  updateConfigStats(yaml);
 
   const fields = [
     {name: 'collectibleName', label: 'Collectible Name'},
@@ -394,6 +395,28 @@ function render(){
       }
     }
   });
+}
+
+function updateConfigStats(yaml) {
+  const configSizeText = document.getElementById('configSizeText');
+  const configLinesText = document.getElementById('configLinesText');
+  
+  if (configSizeText && configLinesText) {
+    const size = new Blob([yaml]).size;
+    const lines = yaml.split('\n').length;
+    
+    let sizeText = '';
+    if (size < 1024) {
+      sizeText = `${size} bytes`;
+    } else if (size < 1024 * 1024) {
+      sizeText = `${(size / 1024).toFixed(1)} KB`;
+    } else {
+      sizeText = `${(size / (1024 * 1024)).toFixed(1)} MB`;
+    }
+    
+    configSizeText.textContent = sizeText;
+    configLinesText.textContent = `${lines} lines`;
+  }
 }
 
 function restore(){
@@ -432,6 +455,133 @@ resetBtn.addEventListener('click', ()=>{
 
 restore();
 render(); 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const validateConfigBtn = document.getElementById('validateConfigBtn');
+  const shareConfigBtn = document.getElementById('shareConfigBtn');
+  
+  if (validateConfigBtn) {
+    validateConfigBtn.addEventListener('click', function() {
+      const data = collect();
+      const yaml = generateFullYAML(data);
+      
+      const validationResult = validateConfiguration(data);
+      
+      if (validationResult.isValid) {
+        alert(window.i18n?.t('validation.success') || '✅ Configuration is valid!');
+      } else {
+        alert(`${window.i18n?.t('validation.error_prefix') || '❌ Configuration validation failed:'} ${validationResult.errorMessage}`);
+      }
+    });
+  }
+  
+  if (shareConfigBtn) {
+    shareConfigBtn.addEventListener('click', function() {
+      const data = collect();
+      const yaml = generateFullYAML(data);
+      
+      const shareData = {
+        textPrefix: data.textPrefix,
+        description: data.description,
+        githubLink: data.githubLink,
+        discordInvite: data.discordInvite,
+        spawnChanceMin: data.spawnChanceMin,
+        spawnChanceMax: data.spawnChanceMax
+      };
+      
+      const shareUrl = new URL(window.location.href);
+      shareUrl.searchParams.set('share', btoa(JSON.stringify(shareData)));
+      
+      navigator.clipboard.writeText(shareUrl.toString()).then(() => {
+        alert('🔗 Share link copied to clipboard!');
+      }).catch(() => {
+        prompt('Share this link:', shareUrl.toString());
+      });
+    });
+  }
+});
+
+function validateConfiguration(data) {
+  const allowedVariables = ['{user}', '{ball}', '{collectible}', '{wrong}'];
+  const result = { isValid: true, errorMessage: '' };
+  
+  if (!data.discordToken) {
+    result.isValid = false;
+    result.errorMessage = window.i18n?.t('validation.missing_token') || 'Discord Bot Token is required';
+    return result;
+  }
+  
+  if (!data.textPrefix) {
+    result.isValid = false;
+    result.errorMessage = window.i18n?.t('validation.missing_prefix') || 'Text Command Prefix is required';
+    return result;
+  }
+  
+  if (!data.description) {
+    result.isValid = false;
+    result.errorMessage = window.i18n?.t('validation.missing_description') || 'Description is required';
+    return result;
+  }
+  
+  const formatRestrictedFields = [
+    { name: 'collectibleName', label: 'Collectible Name' },
+    { name: 'pluralCollectibleName', label: 'Plural Collectible Name' },
+    { name: 'playersGroupCogName', label: 'Players Group Command Name' }
+  ];
+  
+  for (const field of formatRestrictedFields) {
+    const value = data[field.name];
+    if (value && value.trim()) {
+      if (/[^a-z0-9_]/.test(value)) {
+        result.isValid = false;
+        result.errorMessage = (window.i18n?.t('validation.invalid_format') || 'Invalid format in {field}: only lowercase letters, numbers, and underscores are allowed').replace('{field}', field.label);
+        return result;
+      }
+      if (/[A-Z]/.test(value)) {
+        result.isValid = false;
+        result.errorMessage = (window.i18n?.t('validation.no_caps') || 'No capital letters allowed in {field}').replace('{field}', field.label);
+        return result;
+      }
+      if (/\s/.test(value)) {
+        result.isValid = false;
+        result.errorMessage = (window.i18n?.t('validation.no_spaces') || 'No spaces allowed in {field}').replace('{field}', field.label);
+        return result;
+      }
+    }
+  }
+  
+  const gameMessageFields = [
+    { field: 'caughtMessages', name: 'caught messages' },
+    { field: 'wrongMessages', name: 'wrong messages' },
+    { field: 'spawnMessages', name: 'spawn messages' },
+    { field: 'slowMessages', name: 'slow messages' }
+  ];
+  
+  for (const messageField of gameMessageFields) {
+    const messages = data[messageField.field] || [];
+    
+    for (const message of messages) {
+      if (!message) continue;
+      
+      const usedVariables = message.match(/\{[^}]+\}/g) || [];
+      for (const variable of usedVariables) {
+        if (!allowedVariables.includes(variable)) {
+          result.isValid = false;
+          result.errorMessage = (window.i18n?.t('validation.unknown_variable') || 'Unknown variable found: {variable}').replace('{variable}', variable);
+          return result;
+        }
+      }
+      
+      if (messageField.field === 'spawnMessages' && message.includes('{user}')) {
+        result.isValid = false;
+        result.errorMessage = window.i18n?.t('validation.user_in_spawn') || '{user} variable is not allowed in spawn messages';
+        return result;
+      }
+    }
+  }
+  
+  return result;
+}
 
 if (!document.getElementById('input-error-style')) {
   const style = document.createElement('style');

@@ -8,6 +8,22 @@
     "tip_download": "Astuce : Appuyez sur Ctrl + S pour télécharger.",
     "live_preview": "Aperçu en Direct"
   },
+  "validation": {
+    "validate": "Vérifier la configuration",
+    "share": "Partager",
+    "success": "✅ La configuration est valide !",
+    "error_prefix": "❌ La validation de la configuration a échoué :",
+    "missing_token": "Le Token du Bot Discord est requis",
+    "missing_prefix": "Le Préfixe de Commande de Texte est requis",
+    "missing_description": "La Description est requise",
+    "invalid_variables": "Variables invalides trouvées dans les messages de jeu",
+    "user_in_spawn": "La variable {user} n'est pas autorisée dans les messages d'apparition",
+    "unknown_variable": "Variable inconnue trouvée : {variable}",
+    "allowed_variables": "Seules {user}, {ball}, {collectible} et {wrong} sont autorisées",
+    "invalid_format": "Format invalide dans {field} : seules les lettres minuscules, chiffres et tirets bas sont autorisés",
+    "no_caps": "Aucune lettre majuscule autorisée dans {field}",
+    "no_spaces": "Aucun espace autorisé dans {field}"
+  },
   "aria": {
     "toggle_theme": "Basculer le thème",
     "open_github": "Ouvrir GitHub"

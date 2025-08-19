@@ -8,6 +8,22 @@
     "tip_download": "Tip: Press Ctrl + S to download.",
     "live_preview": "Live Preview"
   },
+  "validation": {
+    "validate": "Validation check",
+    "share": "Share",
+    "success": "✅ Configuration is valid!",
+    "error_prefix": "❌ Configuration validation failed:",
+    "missing_token": "Discord Bot Token is required",
+    "missing_prefix": "Text Command Prefix is required",
+    "missing_description": "Description is required",
+    "invalid_variables": "Invalid variables found in game messages",
+    "user_in_spawn": "{user} variable is not allowed in spawn messages",
+    "unknown_variable": "Unknown variable found: {variable}",
+    "allowed_variables": "Only {user}, {ball}, {collectible}, and {wrong} are allowed",
+    "invalid_format": "Invalid format in {field}: only lowercase letters, numbers, and underscores are allowed",
+    "no_caps": "No capital letters allowed in {field}",
+    "no_spaces": "No spaces allowed in {field}"
+  },
   "aria": {
     "toggle_theme": "Toggle theme",
     "open_github": "Open GitHub"

@@ -113,10 +113,112 @@ input:focus, textarea:focus{ border-color: color-mix(in oklab, var(--accent-500)
   flex-direction: column;
   max-width: 600px;
 }
-.preview pre{ flex:1; overflow:auto; margin:0; padding: var(--space-4) var(--space-6); background:#0b1020; color:#e5ecff; font: 13px/1.55 var(--mono); border-top:1px solid var(--line); user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
-.preview .actions{ display:flex; gap:.5rem; padding: var(--space-4); justify-content:flex-end }
+.preview pre{ 
+  flex: none; 
+  overflow: visible; 
+  margin:0; 
+  padding: var(--space-6) var(--space-6); 
+  background:#0b1020; 
+  color:#e5ecff; 
+  font: 13px/1.55 var(--mono); 
+  border-top:1px solid var(--line); 
+  user-select: none; 
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+}
+.preview .actions{ display:flex; gap:.5rem; padding: var(--space-4); justify-content:space-between; align-items:center }
 .badge{ display:inline-flex; align-items:center; gap:.35rem; font-size:.75rem; color:var(--muted); border:1px solid var(--line); border-radius:999px; padding:.25rem .5rem }
 .note{ margin: var(--space-3) 0 0; font-size:.85rem; color:var(--muted) }
+
+.config-stats {
+  display: flex;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  background: color-mix(in oklab, var(--surface) 80%, transparent);
+  border: 1px solid var(--line);
+}
+
+.stat-item svg {
+  opacity: 0.7;
+}
+
+.preview-footer {
+  padding: var(--space-4);
+  border-top: 1px solid var(--line);
+  background: color-mix(in oklab, var(--surface) 95%, transparent);
+}
+
+.quick-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-ghost:hover {
+  background: color-mix(in oklab, var(--accent-500) 8%, var(--surface));
+  border-color: color-mix(in oklab, var(--accent-500) 25%, var(--line));
+  color: var(--accent-500);
+  transform: translateY(-1px);
+}
+
+.btn-ghost:active {
+  transform: translateY(0);
+}
+
+.btn-ghost svg {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.btn-ghost:hover svg {
+  opacity: 0.8;
+}
+
+/* 深色主題下的圖標樣式 */
+[data-theme="dark"] .btn-ghost svg {
+  opacity: 0.5;
+}
+
+[data-theme="dark"] .btn-ghost:hover svg {
+  opacity: 0.7;
+}
+
+/* 淺色主題下的圖標樣式 */
+[data-theme="light"] .btn-ghost svg {
+  opacity: 0.7;
+}
+
+[data-theme="light"] .btn-ghost:hover svg {
+  opacity: 0.9;
+}
 
 .foot{ margin-top: var(--space-8); color:var(--muted); font-size:.85rem }
 

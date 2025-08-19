@@ -1,12 +1,28 @@
 {
   "app": {
-    "title": "BallsDex 設定檔產生器",
-    "subtitle": "純前端頁面．<a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>出品",
-    "privacy": "保護您的隱私隱私：僅儲存在本機瀏覽器",
-    "use_desktop_title": "請使用電腦瀏覽本頁面",
-    "use_desktop_desc": "此工具僅支援桌面版瀏覽器，行動裝置可能顯示不正常。",
+    "title": "BallsDex 配置生成器",
+    "subtitle": "純靜態網站。由 <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a> 製作。",
+    "privacy": "隱私：僅限本地",
+    "use_desktop_title": "請使用電腦瀏覽此頁面",
+    "use_desktop_desc": "此工具僅與桌面瀏覽器相容，在行動裝置上可能無法正常顯示。",
     "tip_download": "小提示：按下 Ctrl + S 可下載。",
     "live_preview": "即時預覽"
+  },
+  "validation": {
+    "validate": "驗證檢查",
+    "share": "分享",
+    "success": "✅ 配置有效！",
+    "error_prefix": "❌ 配置驗證失敗：",
+    "missing_token": "需要 Discord Bot Token",
+    "missing_prefix": "需要文字指令前綴",
+    "missing_description": "需要描述",
+    "invalid_variables": "遊戲訊息中發現無效變數",
+    "user_in_spawn": "生成訊息中不允許使用 {user} 變數",
+    "unknown_variable": "發現未知變數：{variable}",
+    "allowed_variables": "只允許使用 {user}、{ball}、{collectible} 和 {wrong}",
+    "invalid_format": "{field} 格式無效：只允許小寫字母、數字和底線",
+    "no_caps": "{field} 中不允許使用大寫字母",
+    "no_spaces": "{field} 中不允許使用空格"
   },
   "aria": {
     "toggle_theme": "切換主題",

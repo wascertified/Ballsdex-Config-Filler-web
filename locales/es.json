@@ -1,12 +1,28 @@
 {
   "app": {
-    "title": "Generador de config de BallsDex",
-    "subtitle": "Sitio estático puro. Por <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>.",
+    "title": "Generador de Configuración BallsDex",
+    "subtitle": "Puramente estático. Por <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a>.",
     "privacy": "Privacidad: solo local",
-    "use_desktop_title": "Usa una computadora para ver esta página",
+    "use_desktop_title": "Por favor usa una computadora para ver esta página",
     "use_desktop_desc": "Esta herramienta solo es compatible con navegadores de escritorio y puede no mostrarse correctamente en dispositivos móviles.",
     "tip_download": "Consejo: Presiona Ctrl + S para descargar.",
-    "live_preview": "Vista previa en vivo"
+    "live_preview": "Vista Previa en Vivo"
+  },
+  "validation": {
+    "validate": "Verificar configuración",
+    "share": "Compartir",
+    "success": "✅ ¡La configuración es válida!",
+    "error_prefix": "❌ La validación de la configuración falló:",
+    "missing_token": "Se requiere el Token del Bot de Discord",
+    "missing_prefix": "Se requiere el Prefijo del Comando de Texto",
+    "missing_description": "Se requiere la Descripción",
+    "invalid_variables": "Se encontraron variables inválidas en los mensajes del juego",
+    "user_in_spawn": "La variable {user} no está permitida en los mensajes de aparición",
+    "unknown_variable": "Se encontró una variable desconocida: {variable}",
+    "allowed_variables": "Solo se permiten {user}, {ball}, {collectible} y {wrong}",
+    "invalid_format": "Formato inválido en {field}: solo se permiten letras minúsculas, números y guiones bajos",
+    "no_caps": "No se permiten mayúsculas en {field}",
+    "no_spaces": "No se permiten espacios en {field}"
   },
   "aria": {
     "toggle_theme": "Cambiar tema",

@@ -8,6 +8,22 @@
     "tip_download": "نصيحة: اضغط Ctrl + S للتحميل.",
     "live_preview": "معاينة مباشرة"
   },
+  "validation": {
+    "validate": "فحص الإعداد",
+    "share": "مشاركة",
+    "success": "✅ الإعداد صحيح!",
+    "error_prefix": "❌ فشل التحقق من الإعداد:",
+    "missing_token": "رمز Discord Bot مطلوب",
+    "missing_prefix": "بادئة الأمر النصي مطلوبة",
+    "missing_description": "الوصف مطلوب",
+    "invalid_variables": "تم العثور على متغيرات غير صالحة في رسائل اللعبة",
+    "user_in_spawn": "المتغير {user} غير مسموح به في رسائل الظهور",
+    "unknown_variable": "تم العثور على متغير غير معروف: {variable}",
+    "allowed_variables": "يُسمح فقط بـ {user} و {ball} و {collectible} و {wrong}",
+    "invalid_format": "تنسيق غير صالح في {field}: يُسمح فقط بالحروف الصغيرة والأرقام والشرطة السفلية",
+    "no_caps": "لا يُسمح بالحروف الكبيرة في {field}",
+    "no_spaces": "لا يُسمح بالمسافات في {field}"
+  },
   "aria": {
     "toggle_theme": "تبديل المظهر",
     "open_github": "فتح GitHub"

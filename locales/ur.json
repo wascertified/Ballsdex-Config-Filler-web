@@ -1,12 +1,28 @@
 {
   "app": {
-    "title": "BallsDex کنفیگ جنریٹر",
-    "subtitle": "مکمل طور پر سٹیٹک۔ <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a> کی طرف سے۔",
+    "title": "BallsDex کنفیگریشن جنریٹر",
+    "subtitle": "مکمل طور پر جامد۔ <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a> کی طرف سے۔",
     "privacy": "رازداری: صرف مقامی",
     "use_desktop_title": "براہ کرم اس صفحے کو دیکھنے کے لیے کمپیوٹر استعمال کریں",
-    "use_desktop_desc": "یہ ٹول صرف ڈیسک ٹاپ براؤزر کے ساتھ مطابقت رکھتا ہے اور موبائل آلات پر درست طریقے سے ظاہر نہیں ہو سکتا۔",
+    "use_desktop_desc": "یہ ٹول صرف ڈیسک ٹاپ براؤزر کے ساتھ مطابقت رکھتا ہے اور موبائل ڈیوائس پر درست طریقے سے ظاہر نہیں ہو سکتا۔",
     "tip_download": "ٹپ: ڈاؤن لوڈ کے لیے Ctrl + S دبائیں۔",
     "live_preview": "لائیو پیش نظارہ"
+  },
+  "validation": {
+    "validate": "کنفیگریشن چیک کریں",
+    "share": "شیئر کریں",
+    "success": "✅ کنفیگریشن درست ہے!",
+    "error_prefix": "❌ کنفیگریشن کی تصدیق ناکام:",
+    "missing_token": "Discord Bot Token درکار ہے",
+    "missing_prefix": "ٹیکسٹ کمانڈ پریفکس درکار ہے",
+    "missing_description": "تفصیل درکار ہے",
+    "invalid_variables": "گیم پیغامات میں غلط متغیرات ملے",
+    "user_in_spawn": "سپان پیغامات میں {user} متغیر کی اجازت نہیں ہے",
+    "unknown_variable": "نامعلوم متغیر ملا: {variable}",
+    "allowed_variables": "صرف {user}, {ball}, {collectible}, اور {wrong} کی اجازت ہے",
+    "invalid_format": "{field} میں غلط فارمیٹ: صرف چھوٹے حروف، اعداد اور انڈر سکور کی اجازت ہے",
+    "no_caps": "{field} میں بڑے حروف کی اجازت نہیں ہے",
+    "no_spaces": "{field} میں خالی جگہوں کی اجازت نہیں ہے"
   },
   "aria": {
     "toggle_theme": "تھیم تبدیل کریں",

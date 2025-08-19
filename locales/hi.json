@@ -1,12 +1,28 @@
 {
   "app": {
-    "title": "BallsDex कॉन्फ़िग जनरेटर",
+    "title": "BallsDex कॉन्फ़िगरेशन जनरेटर",
     "subtitle": "पूरी तरह से स्थिर। <a href=\"https://github.com/Ray-Hsueh/Ballsdex-Config-Filler-web\" target=\"_blank\" rel=\"noopener\">Ray Hsueh</a> द्वारा।",
     "privacy": "गोपनीयता: केवल स्थानीय",
     "use_desktop_title": "कृपया इस पेज को देखने के लिए कंप्यूटर का उपयोग करें",
-    "use_desktop_desc": "यह टूल केवल डेस्कटॉप ब्राउज़र के साथ संगत है और मोबाइल उपकरणों पर सही तरीके से प्रदर्शित नहीं हो सकता है।",
+    "use_desktop_desc": "यह टूल केवल डेस्कटॉप ब्राउज़र के साथ संगत है और मोबाइल डिवाइस पर सही तरीके से प्रदर्शित नहीं हो सकता है।",
     "tip_download": "सुझाव: डाउनलोड के लिए Ctrl + S दबाएं।",
     "live_preview": "लाइव प्रीव्यू"
+  },
+  "validation": {
+    "validate": "कॉन्फ़िगरेशन जांचें",
+    "share": "साझा करें",
+    "success": "✅ कॉन्फ़िगरेशन मान्य है!",
+    "error_prefix": "❌ कॉन्फ़िगरेशन सत्यापन विफल:",
+    "missing_token": "Discord Bot Token आवश्यक है",
+    "missing_prefix": "टेक्स्ट कमांड प्रीफिक्स आवश्यक है",
+    "missing_description": "विवरण आवश्यक है",
+    "invalid_variables": "गेम संदेशों में अमान्य चर पाए गए",
+    "user_in_spawn": "स्पॉन संदेशों में {user} चर की अनुमति नहीं है",
+    "unknown_variable": "अज्ञात चर पाया गया: {variable}",
+    "allowed_variables": "केवल {user}, {ball}, {collectible}, और {wrong} की अनुमति है",
+    "invalid_format": "{field} में अमान्य प्रारूप: केवल लोअरकेस अक्षर, संख्याएं और अंडरस्कोर की अनुमति है",
+    "no_caps": "{field} में कैपिटल अक्षर की अनुमति नहीं है",
+    "no_spaces": "{field} में स्पेस की अनुमति नहीं है"
   },
   "aria": {
     "toggle_theme": "थीम बदलें",

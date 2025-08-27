@@ -472,6 +472,43 @@ document.addEventListener('DOMContentLoaded', function() {
     const tmaoTrueBtn = document.getElementById('tmaoTrueBtn');
     const tmaoFalseBtn = document.getElementById('tmaoFalseBtn');
 
+    const numFieldIds = [
+        'maxFavorites',
+        'maxAttackBonus',
+        'maxHealthBonus',
+        'logChannel',
+        'clientId',
+        'spawnChanceMin',
+        'spawnChanceMax'
+    ];
+    const multiNumFieldIds = [
+        'guildIds',
+        'rootRoleIds',
+        'adminRoleIds'
+    ];
+
+    numFieldIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.setAttribute('inputmode', 'numeric');
+            el.setAttribute('pattern', '[0-9]*');
+            el.addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^0-9]/g, '');
+            });
+        }
+    });
+
+    multiNumFieldIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.setAttribute('inputmode', 'numeric');
+            el.setAttribute('pattern', '[0-9\n]*');
+            el.addEventListener('input', function(e) {
+                this.value = this.value.replace(/[^0-9\n]/g, '');
+            });
+        }
+    });
+
     if (validateConfigBtn) {
         validateConfigBtn.addEventListener('click', function() {
             const data = collect();
